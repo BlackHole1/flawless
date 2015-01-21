@@ -3,17 +3,17 @@
 
 ## 使用方法：
 在文件里调用flawless.css和bootstrap_ico.css就行了。
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>FlawLess</title>
-	<link rel="stylesheet" href="flawless.css">
-	<link rel="stylesheet" href="bootstrap_ico.css">
-</head>
-<body>
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;FlawLess&lt;/title&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;flawless.css&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;bootstrap_ico.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
 ...
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
 如果你想更改,可以在less/flawless.less里修改下include文件就可以完成自定义哦~
 
 a标签使用:
