@@ -1,0 +1,48 @@
+@import "bootstrap_ico.css";
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+.a_tag {
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: none;
+  height: 20px;
+  width: 85px;
+  line-height: 19px;
+  border: 1px solid #cccccc;
+  color: #777777;
+  background-color: #f4f4f4;
+  padding: 0 3px;
+  letter-spacing: 1px;
+  border-top-right-radius: 3px;
+  -o-border-top-right-radius: 3px;
+  -ms-border-top-right-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -o-border-bottom-right-radius: 3px;
+  -ms-border-bottom-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  -o-border-top-left-radius: 3px;
+  -ms-border-top-left-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -o-border-bottom-left-radius: 3px;
+  -ms-border-bottom-left-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+}
+.a_tag:hover {
+  text-decoration: none;
+  color: #428bca;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.23);
+}
+.a_tag .division {
+  margin-left: -4px;
+}
