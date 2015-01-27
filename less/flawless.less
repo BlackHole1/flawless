@@ -17,8 +17,8 @@
 .base{
 	margin-bottom: 20px;
 }
-//a标签样式1
-.a_tag{
+//a标签 外链
+.a_tag-link{
 	display: inline-block;
 	font-size: 13px;
 	text-decoration: none;
@@ -50,6 +50,27 @@
 	em{
 		padding-left: 3px;
 		padding-right: 3px;
+	}
+}
+
+//a标签 幽灵按钮
+.a_tag-button{
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	border: 1px solid transparent;
+	.rounded_all;
+	color: #777777;
+	background-color: #FFFFFF;
+	border-color: #428bca;
+	width: 176;
+	height: 37px;
+	line-height: 2.1;
+	&:hover{
+		background-color:@color1;
+		color: black;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.23);
 	}
 }
 
@@ -95,13 +116,16 @@
 
 //code样式
 .code_tag{
-padding: 12px;
-	background-color: @color4 + 40;
-	border: 1px solid #e3e3e3;
-	.rounded_rtb;
-	.rounded_ltb;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+display: block;
+font-family: "Courier New",monospace;
+padding: 4px 0 5px 10px;
+color: #0c4678;
+background-color: #f5f5f5;
+border: 1px solid #ccc;
+border-radius: 4px;
+pre{
+	font-family: "Courier New",monospace;
+}
 }
 
 //code片段样式

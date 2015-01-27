@@ -9,9 +9,9 @@
 <div class="container">
 
 <div class="base">
-	<h2>A标签 例子1</h2>
-	<a href="#" class="a_tag"></a>
-	<a href="#" class="a_tag">自定义内容</a>
+	<h2>A标签 外链</h2>
+	<a href="#" class="a_tag-link"></a>
+	<a href="#" class="a_tag-link">自定义内容</a>
 	<br>
 	<div class="embed placeholder-top">
 		<span>在a标签里加入class="a_tag"即可。如果你没有在a标签里添加任何内容，就像第一个例子一样自动添加内容。</span>
@@ -27,21 +27,44 @@
 </div>
 
 <div class="base">
+	<h2>A标签 幽灵按钮</h2>
+	<a href="#" class="a_tag-button">幽灵按钮</a>
+	<br>
+	<div class="embed placeholder-top">
+		<span>在a标签里加入class=".a_tag-button"即可。</span>
+		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;.a_tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
+	</div>
+</div>
+
+<div class="base">
 	<h2>form标签及input 例子1</h2>
 	<form action="#" class="form_tag">
+		<input type="text" data="email"/>
+		<input type="text" data="user" />
+		<input type="password" data="password" />
 		<input type="text" />
-		<input type="password" />
+		<input type="text" data="我是自定义内容" />
+		<input type="text" data="自定义宽高" width="200" height="30" />
 		<input type="submit" />
 	</form>
 	<div class="embed placeholder-top">
 		<span>在form标签里加入class="form_tag"即可。例：</span>
-		<span class="code-fragment"><br>
-			&lt;form action=&quot;#&quot; class=&quot;form_tag&quot;&gt;<br>
-			&lt;input type=&quot;text&quot; /&gt;<br>
-			&lt;input type=&quot;password&quot; /&gt;<br>
-			&lt;input type=&quot;submit&quot; /&gt;<br>
-			&lt;/form&gt;<br></span>
-		<span>placeholder说明会由jquery自动添加</span>
+		<span class="code-fragment">&lt;form action=&quot;#&quot; class=&quot;form_tag&quot;&gt;</span>
+		<span>，input样式只需要在input里插入data就行了。例：</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;email&quot; /&gt;</span>
+		<span>，data为email、邮箱时,就像第一个例子。当data为user、username、用户、用户名、登录名时，就是第二个例子。当data为password、密码时，就是第三个例子。<br>如果没有写data，例：</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; /&gt;</span>
+		<span>,将会自动帮你添加字符串为“搜索/Search”。如果你不写type，例：</span>
+		<span class="code-fragment">&lt;input /&gt;</span><span>,也会自动帮你添加字符串为“搜索/Search”，就像第四个</span>
+		<br>
+		<span>如果你想自定义显示input的内容，在input标签里加上data属性，值添上你所想显示的内容就行(不能和"email", "邮箱", "user", "username", "用户", "用户名", "登录名", "password", "密码"一样)，例：</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;我是自定义内容&quot; /&gt;</span>
+		<span>。就像第五个例子一样<span>
+		<br>
+		<span>在input添加width、height即可自定义input的宽高(防止有些人不会css...)，例：</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;自定义宽高&quot; width=&quot;200&quot; height=&quot;30&quot; /&gt;</span>
+
+
 	</div>
 </div>
 
@@ -69,9 +92,18 @@
 
 <div class="base">
 	<h2>代码</h2>
+	
 	<code>
-		ss
+	<pre>$("code").each(function() {
+	if (!$(this).hasClass('code-fragment')) {
+		$(this).addClass('code_tag');
+	}
+});</pre>
 	</code>
+	<div class="embed placeholder-top">
+		<span>直接写code标签就行，无需加其他样式，如果code样式中存在code-fragment，将不会起作用。例：</span>
+		<span class="code-fragment">&lt;code&gt;i'm code&lt;/code&gt;</span>
+	</div>
 </div>
 </body>
 <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.js"></script>
