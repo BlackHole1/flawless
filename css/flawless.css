@@ -5,6 +5,9 @@
   margin: 0;
   font-family: "微软雅黑";
 }
+span {
+  font-size: 14px;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -65,23 +68,72 @@
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  font-size: 14px;
   text-decoration: none;
   border: 1px solid transparent;
   -webkit-border-radius: 4px;
   -ms-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #777777;
-  background-color: #FFFFFF;
+  color: #428bca;
+  background-color: rgba(255, 255, 255, 0);
   border-color: #428bca;
-  width: 176;
-  height: 37px;
-  line-height: 2.1;
+  padding: 8px 50px;
+  line-height: 1.4;
 }
 .a_tag-button:hover {
   background-color: #428bca;
-  color: black;
+  color: white;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s linear;
+}
+.img-circle {
+  width: 112px;
+  cursor: pointer;
+  -ms-border-top-right-radius: 500px;
+  -moz-border-top-right-radius: 500px;
+  -webkit-border-top-right-radius: 500px;
+  -ms-border-bottom-right-radius: 500px;
+  -moz-border-bottom-right-radius: 500px;
+  -webkit-border-bottom-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+  border-top-right-radius: 500px;
+  -ms-border-top-left-radius: 500px;
+  -moz-border-top-left-radius: 500px;
+  -webkit-border-top-left-radius: 500px;
+  -ms-border-bottom-left-radius: 500px;
+  -moz-border-bottom-left-radius: 500px;
+  -webkit-border-bottom-left-radius: 500px;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  margin-top: 5px;
+}
+.img-circle-hover {
+  box-sizing: border-box;
+  width: 112px;
+  -ms-border-top-right-radius: 500px;
+  -moz-border-top-right-radius: 500px;
+  -webkit-border-top-right-radius: 500px;
+  -ms-border-bottom-right-radius: 500px;
+  -moz-border-bottom-right-radius: 500px;
+  -webkit-border-bottom-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+  border-top-right-radius: 500px;
+  -ms-border-top-left-radius: 500px;
+  -moz-border-top-left-radius: 500px;
+  -webkit-border-top-left-radius: 500px;
+  -ms-border-bottom-left-radius: 500px;
+  -moz-border-bottom-left-radius: 500px;
+  -webkit-border-bottom-left-radius: 500px;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  margin-top: 5px;
+  border: 6px solid #cccccc;
+  transition: border linear 0.2s;
+}
+.img-circle-hover:hover {
+  cursor: pointer;
+  border: 2px solid #cccccc;
 }
 .form_tag {
   padding-top: 0;
@@ -187,11 +239,11 @@
   margin-top: 5px;
 }
 .placeholder-bottom {
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .placeholder-left {
-  margin-top: 5px;
+  margin-left: 5px;
 }
 .placeholder-right {
-  margin-top: 5px;
+  margin-right: 5px;
 }

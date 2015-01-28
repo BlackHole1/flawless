@@ -9,6 +9,9 @@
 	margin: 0;
 	font-family: "微软雅黑";
 }
+span{
+	font-size: 14px;
+}
 .container{
 	margin-right: auto;
 	margin-left: auto;
@@ -58,22 +61,44 @@
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
+	font-size: 14px;
 	text-decoration: none;
 	border: 1px solid transparent;
 	.rounded_all;
-	color: #777777;
-	background-color: #FFFFFF;
+	color: #428bca;
+	background-color: rgba(255, 255, 255, 0);
 	border-color: #428bca;
-	width: 176;
-	height: 37px;
-	line-height: 2.1;
+	padding: 8px 50px;
+	line-height: 1.4;
 	&:hover{
 		background-color:@color1;
-		color: black;
+		color: white;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.23);
+		transition: all 0.2s linear;
 	}
 }
 
+//img图片样式
+.img-circle{
+    width: 112px;
+    cursor: pointer;
+    .rounded_rtb(500px);
+    .rounded_ltb(500px);
+    margin-top: 5px;
+}
+.img-circle-hover{
+	box-sizing: border-box;
+    width: 112px;
+    .rounded_rtb(500px);
+    .rounded_ltb(500px);
+    margin-top: 5px;
+    border:6px solid @color4;
+    transition:border linear 0.2s;
+    &:hover{
+    	cursor: pointer;
+    	border:2px solid @color4;
+    }
+}
 //form标签
 .form_tag{
 	padding-top: 0;
@@ -145,11 +170,11 @@ pre{
 	margin-top: 5px;
 }
 .placeholder-bottom{
-	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .placeholder-left{
-	margin-top: 5px;
+	margin-left: 5px;
 }
 .placeholder-right{
-	margin-top: 5px;
+	margin-right: 5px;
 }

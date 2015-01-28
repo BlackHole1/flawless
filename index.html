@@ -7,6 +7,33 @@
 </head>
 <body>
 <div class="container">
+<h3 style="margin-top:10px;margin-bottom:10px;color:#474747">flawless由<a href="http://weibo.com/comelove" style="text-decoration: none;color: #428bca;">Black-Hole</a>构写，一个为国人开发的CSS框架，采用了“扁平化”设计。css由less开发，js由jquery来写。使用了Glyphicons字体图标。为简便而诞生的css框架。</h3>
+
+<br>
+<a href="https://github.com/BlackHole1/flawless" style="text-decoration: none;color: #428bca;">flawless下载</a>
+<br><br>
+<hr>
+<div class="base">
+	<h2>居中样式表</h2>
+	<div class="container">
+		我是内容
+	</div>
+	<br>
+	<div class="embed placeholder-top">
+		<span>在div里加上class="container"就行，例：</span>
+		<span class="code-fragment">&lt;div class=&quot;container&quot;&gt;我是内容&lt;/div&gt;</span>
+		<span>，多层container不会起作用，因为container使用的是px绝对定位，而不是%相对定位</span>
+	</div>
+</div>
+
+<div class="base">
+	<h2>占位符</h2>
+	<div class="placeholder-top placeholder-bottom placeholder-left placeholder-right">我的上下左右全部被占了5px空间</div>
+	<div class="embed">
+	<span>placeholder-top是向上占5px，同理placeholder-bottom placeholder-left placeholder-right各向下、左、右占位，例：</span>
+	<span class="code-fragment">&lt;div class=&quot;placeholder-top placeholder-bottom placeholder-left placeholder-right&quot;&gt;我的上下左右全部被占了5px空间&lt;/div&gt;</span>
+</div>
+</div>
 
 <div class="base">
 	<h2>A标签 外链</h2>
@@ -36,6 +63,15 @@
 	</div>
 </div>
 
+<div class="base">
+	<h2>img图片样式</h2>
+	<img class="img-circle" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
+	<img class="img-circle-hover" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
+	<div class="embed placeholder-top">
+		<span>当class="img-circle"时，是普通圆角样式。就像第一个。</span>
+		<span>当class="img-circle-hover"时，带边框和变化效果，例子为第二个。</span>
+	</div>
+</div>
 <div class="base">
 	<h2>form标签及input 例子1</h2>
 	<form action="#" class="form_tag">
@@ -92,9 +128,9 @@
 
 <div class="base">
 	<h2>代码</h2>
-	
+	<span onclick="cl()">asdas</span>
 	<code>
-	<pre>$("code").each(function() {
+	<pre id="s">$("code").each(function() {
 	if (!$(this).hasClass('code-fragment')) {
 		$(this).addClass('code_tag');
 	}
