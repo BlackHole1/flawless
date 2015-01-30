@@ -78,6 +78,28 @@ span{
 	}
 }
 
+.button_tag{
+	color: @color2;
+	background-color: rgba(255, 255, 255, 0);
+	border:2px @color1 solid;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+	height: 91px;
+	width: 95px;
+	cursor: pointer;
+	border-radius: 100%; 
+	outline:none;
+	&:hover{
+	-webkit-transition:-webkit-box-shadow linear .2s,text-shadow linear .2s;
+	transition:-webkit-box-shadow linear .2s,text-shadow linear .2s;
+	-webkit-box-shadow:0 0 10px @color1,inset 0 0 10px @color1;
+	text-shadow: 0 1px 2px @color1;
+	}
+
+
+}
+
 //img图片样式
 .img-circle{
     width: 112px;
@@ -97,6 +119,26 @@ span{
     &:hover{
     	cursor: pointer;
     	border:2px solid @color4;
+    }
+}
+.img-frames{
+	padding: 3px;
+	width: 112px;
+	.rounded_rtb;
+    .rounded_ltb;
+    border:1px solid @color4;
+}
+.img-frames-hover{
+	box-sizing: border-box;
+	padding: 3px;
+    width: 112px;
+    .rounded_rtb;
+    .rounded_ltb;
+    border:1px solid @color4;
+    transition:all linear 0.2s;
+    &:hover{
+    	cursor: pointer;
+    	border:0px solid @color4;
     }
 }
 //form标签

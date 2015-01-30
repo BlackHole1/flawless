@@ -14,19 +14,31 @@ $(document).ready(function() {
 	}
 });
 
+//button标签脚本
+$(document).ready(function() {
+	$("button").each(function(){
+		var button_tag_data_text = $(this).attr("data");
+		if(button_tag_data_text !== undefined && $(this).hasClass('button_tag')){
+			$(this).css({
+				"height":button_tag_data_text,
+				"width":button_tag_data_text*1+3
+			});
+		}
+	});
+});
 //input脚本
 $(document).ready(function() {
 	$(".form_tag input[data='email'] , .form_tag input[data='邮箱']").attr("placeholder", "邮箱/Email");
 	$(".form_tag input[data='user'], .form_tag input[data='username'] , .form_tag input[data='用户'] , .form_tag input[data='用户名'] , .form_tag input[data='登录名']").attr("placeholder", "用户名/UserName");
-	$(".form_tag input[data='password'] , .form_tag input[data='密码']").attr("placeholder", "密码/PassWord");
-	var data_arr = ["email", "邮箱", "user", "username", "用户", "用户名", "登录名", "password", "密码"];
+	$(".form_tag input[type='password']").attr("placeholder", "密码/PassWord");
+	var data_arr = ["email", "邮箱", "user", "username", "用户", "用户名", "登录名", "password"];
 	$(".form_tag input").each(function() {
-		var data_text = $(this).attr("data");
-		if(data_text == undefined && ($(this).attr("type") == "text" || $(this).attr("type") == undefined)){
+		var a_tag_data_text = $(this).attr("data");
+		if(a_tag_data_text == undefined && ($(this).attr("type") == "text" || $(this).attr("type") == undefined)){
 			$(this).attr("placeholder", "搜索/Search");
 		}
-		if(data_text !== undefined && $.inArray(data_text,data_arr) == "-1"){
-			$(this).attr("placeholder",data_text);
+		if(a_tag_data_text !== undefined && $.inArray(a_tag_data_text,data_arr) == "-1"){
+			$(this).attr("placeholder",a_tag_data_text);
 		}
 
 		//自添input高宽

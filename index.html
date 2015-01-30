@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -58,8 +59,24 @@
 	<a href="#" class="a_tag-button">幽灵按钮</a>
 	<br>
 	<div class="embed placeholder-top">
-		<span>在a标签里加入class=".a_tag-button"即可。</span>
-		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;.a_tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
+		<span>在a标签里加入class="a_tag-button"即可。</span>
+		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a_tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
+	</div>
+</div>
+
+<div class="base">
+	<h2>幽灵按钮2</h2>
+	<button class="button_tag">START</button>
+	<button class="button_tag" data="70">start</button>
+	<br>
+	<div class="embed placeholder-top">
+		<span>在button标签里加入class="button_tag"即可。例：</span>
+		<span class="code-fragment">&lt;button  class=&quot;button_tag&quot;&gt;START&lt;/button&gt;</span>
+		<span>，就像第一个例子。</span>
+		<br>
+		<span>加入data即可控制大小，例：</span>
+		<span class="code-fragment">&lt;button  class=&quot;button_tag&quot; data=&quot;70&quot;&gt;START&lt;/button&gt;</span>
+		<span>，就像第二个例子。</span>
 	</div>
 </div>
 
@@ -67,9 +84,13 @@
 	<h2>img图片样式</h2>
 	<img class="img-circle" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
 	<img class="img-circle-hover" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
+	<img class="img-frames" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
+	<img class="img-frames-hover" src="http://tp2.sinaimg.cn/2007926177/180/5699531216/1" />
 	<div class="embed placeholder-top">
-		<span>当class="img-circle"时，是普通圆角样式。就像第一个。</span>
-		<span>当class="img-circle-hover"时，带边框和变化效果，例子为第二个。</span>
+		<span>当class="img-circle"时，是普通圆形样式。就像第一个。</span><br>
+		<span>当class="img-circle-hover"时，圆形带边框和变化效果，例子为第二个。</span><br>
+		<span>当class="img-frames"时，带边框圆角样式，例子为第三个</span><br>
+		<span>当class="img-frames-hover"时，带边框圆角样式和变化效果，例子为第四个</span>
 	</div>
 </div>
 <div class="base">
@@ -128,9 +149,8 @@
 
 <div class="base">
 	<h2>代码</h2>
-	<span onclick="cl()">asdas</span>
 	<code>
-	<pre id="s">$("code").each(function() {
+	<pre>$("code").each(function() {
 	if (!$(this).hasClass('code-fragment')) {
 		$(this).addClass('code_tag');
 	}
