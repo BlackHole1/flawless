@@ -20,8 +20,9 @@ span{
 .base{
 	margin-bottom: 20px;
 }
+
 //a标签 外链
-.a_tag-link{
+.a-tag-link{
 	display: inline-block;
 	font-size: 13px;
 	text-decoration: none;
@@ -36,12 +37,11 @@ span{
 	background-color: @color4 + 40;
 	padding: 0 3px;
 	letter-spacing: 1px;
-	.rounded_rtb;
-	.rounded_ltb;
+	.border-radius;
 	&:hover{
 		text-decoration:none;
 		color: @color1;
-		box-shadow: 0 1px 2px rgba(0,0,0,0.23);
+		.box-shadow(0 1px 2px rgba(0,0,0,0.23));
 	}
 	i{
 		padding-left: 3px;
@@ -57,83 +57,106 @@ span{
 }
 
 //a标签 幽灵按钮
-.a_tag-button{
+.a-tag-button{
 	display: inline-block;
+	padding: 8px 50px;
+	line-height: 1.4;
 	text-align: center;
-	cursor: pointer;
 	font-size: 14px;
+	cursor: pointer;
 	text-decoration: none;
 	border: 1px solid transparent;
-	.rounded_all;
+	.border-radius;
 	color: #428bca;
 	background-color: rgba(255, 255, 255, 0);
 	border-color: #428bca;
-	padding: 8px 50px;
-	line-height: 1.4;
 	&:hover{
 		background-color:@color1;
 		color: white;
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.23);
-		transition: all 0.2s linear;
+		.box-shadow(0 2px 20px rgba(0, 0, 0, 0.23));
+		.transition(all 0.2s linear);
 	}
 }
 
-.button_tag{
-	color: @color2;
-	background-color: rgba(255, 255, 255, 0);
+//button幽灵按钮
+.button-tag{
+	height: 91px;
+	width: 95px;
 	border:2px @color1 solid;
 	font-size: 24px;
 	text-decoration: none;
 	text-align: center;
-	height: 91px;
-	width: 95px;
 	cursor: pointer;
-	border-radius: 100%; 
+	.border-radius(100%);
 	outline:none;
+	color: @color2;
+	background-color: rgba(255, 255, 255, 0);
 	&:hover{
-	-webkit-transition:-webkit-box-shadow linear .2s,text-shadow linear .2s;
-	transition:-webkit-box-shadow linear .2s,text-shadow linear .2s;
-	-webkit-box-shadow:0 0 10px @color1,inset 0 0 10px @color1;
+	.transition(all linear .2s);
+	.box-shadow2(0 0 10px @color1,inset 0 0 10px @color1);
 	text-shadow: 0 1px 2px @color1;
 	}
+}
 
-
+.a-tag-group{
+	a{
+		display: inline-block;
+		margin-left: -1px;
+		padding: 4px 20px;
+		line-height: 1.4;
+		text-align: center;
+		float: left;
+		text-decoration: none;
+		border: 1px solid transparent;
+		color: @color1;
+		background-color: rgba(255, 255, 255, 0);
+		border-color: @color4;
+	}
+	a:first-child{
+		.rounded_ltb;
+	}
+	a:last-child{
+		.rounded_rtb;
+	}
+	a,a:first-child,a:last-child{
+		&:hover{
+			background-color:@color4 + 28;
+			border-color: @color4 - 10;
+			color: @color2;
+		}
+	}
 }
 
 //img图片样式
 .img-circle{
     width: 112px;
-    cursor: pointer;
-    .rounded_rtb(500px);
-    .rounded_ltb(500px);
     margin-top: 5px;
+    cursor: pointer;
+    .border-radius(100%);
 }
 .img-circle-hover{
 	box-sizing: border-box;
     width: 112px;
-    .rounded_rtb(500px);
-    .rounded_ltb(500px);
     margin-top: 5px;
+    .border-radius(100%);
     border:6px solid @color4;
     transition:border linear 0.2s;
     &:hover{
-    	cursor: pointer;
     	border:2px solid @color4;
+    	cursor: pointer;
     }
 }
 .img-frames{
 	padding: 3px;
 	width: 112px;
-	.rounded_rtb;
-    .rounded_ltb;
+	.border-radius;
     border:1px solid @color4;
 }
 .img-frames-hover{
 	box-sizing: border-box;
 	padding: 3px;
     width: 112px;
-    .rounded_rtb;
-    .rounded_ltb;
+    .border-radius;
     border:1px solid @color4;
     transition:all linear 0.2s;
     &:hover{
@@ -142,27 +165,23 @@ span{
     }
 }
 //form标签
-.form_tag{
-	padding-top: 0;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
+.form-tag{
+	margin: 8px 0 8px 0;
+	padding: 0 10px 0 10px;
 	input{
 		width: auto;
 		height: 30px;
 		padding-left: 10px;
 		border: 1px solid #ccc;
-		box-shadow: inset 0 1px 1px rgba(0,0,0,.10);
-		.rounded_rtb;
-		.rounded_ltb;
+		.box-shadow(inset 0 1px 1px rgba(0,0,0,.10));
+		.border-radius;
 	}
 	input[type="submit"]{
-		cursor:pointer;
 		width: 50px;
 		padding-left: 0px;
 		background-color: @color4 + 40;
-		box-shadow:0 0px 4px rgba(0, 0, 0, 0.23);
+		.box-shadow(0 0px 4px rgba(0, 0, 0, 0.23));
+		cursor:pointer;
 	}
 }
 //嵌入样式
@@ -170,40 +189,36 @@ span{
 	padding: 12px;
 	background-color: @color4 + 40;
 	border: 1px solid #e3e3e3;
-	.rounded_rtb;
-	.rounded_ltb;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	.border-radius;
+	.box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
 	span{
 		font-size: 17px;
-		color: @color3 - 20;
 		line-height: 25px;
+		color: @color3 - 20;
 	}
 }
 
 //code样式
-.code_tag{
-display: block;
-font-family: "Courier New",monospace;
-padding: 4px 0 5px 10px;
-color: #0c4678;
-background-color: #f5f5f5;
-border: 1px solid #ccc;
-border-radius: 4px;
-pre{
+.code-tag{
+	display: block;
+	border: 1px solid #ccc;
+	.border-radius(4px);
+	padding: 4px 0 5px 10px;
 	font-family: "Courier New",monospace;
-}
+	color: #0c4678;
+	background-color: #f5f5f5;
+	pre{
+		font-family: "Courier New",monospace;
+	}
 }
 
 //code片段样式
 .code-fragment{
+	padding: 0 8px 0 8px;
 	background-color: rgba(255, 0, 0, 0.06);
 	color: rgba(255, 0, 0, 0.67)!important;
-	padding-left: 8px;
-	padding-right: 8px;
-	box-shadow: inset 0 1px 1px rgba(255, 0, 0, 0.06);
-	.rounded_rtb;
-	.rounded_ltb;
+	.box-shadow(inset 0 1px 1px rgba(255, 0, 0, 0.06));
+	.border-radius;
 }
 
 

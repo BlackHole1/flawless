@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<title>FlawLess</title>
 	<link rel="stylesheet" href="/css/flawless.css">
-	<link rel="stylesheet" href="/css/bootstrap_ico.css">
 </head>
 <body>
 <div class="container">
 <h3 style="margin-top:10px;margin-bottom:10px;color:#474747">flawless由<a href="http://weibo.com/comelove" style="text-decoration: none;color: #428bca;">Black-Hole</a>构写，一个为国人开发的CSS框架，采用了“扁平化”设计。css由less开发，js由jquery来写。使用了Glyphicons字体图标。为简便而诞生的css框架。</h3>
+<h4 style="margin-top:10px;margin-bottom:10px;color:#474747">不兼容IE，虽说IE下能看，但是不美观。等IE退出浏览器平台时，我一定会开瓶红酒庆祝</h4>
+<h4 style="margin-top:10px;margin-bottom:10px;color:#474747">因为使用的是CSS3，所以可能在不同浏览器下，展现的方式不同，我也在努力做到每个浏览器下，展现的页面都是十分漂亮的</h4>
 
 <br>
 <a href="https://github.com/BlackHole1/flawless" style="text-decoration: none;color: #428bca;">flawless下载</a>
@@ -19,13 +20,12 @@
 	<div class="container">
 		我是内容
 	</div>
-	<br>
 	<div class="embed placeholder-top">
 		<span>在div里加上class="container"就行，例：</span>
 		<span class="code-fragment">&lt;div class=&quot;container&quot;&gt;我是内容&lt;/div&gt;</span>
 		<span>，多层container不会起作用，因为container使用的是px绝对定位，而不是%相对定位</span>
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>占位符</h2>
@@ -34,51 +34,65 @@
 	<span>placeholder-top是向上占5px，同理placeholder-bottom placeholder-left placeholder-right各向下、左、右占位，例：</span>
 	<span class="code-fragment">&lt;div class=&quot;placeholder-top placeholder-bottom placeholder-left placeholder-right&quot;&gt;我的上下左右全部被占了5px空间&lt;/div&gt;</span>
 </div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>A标签 外链</h2>
-	<a href="#" class="a_tag-link"></a>
-	<a href="#" class="a_tag-link">自定义内容</a>
+	<a href="#" class="a-tag-link"></a>
+	<a href="#" class="a-tag-link">自定义内容</a>
 	<br>
 	<div class="embed placeholder-top">
-		<span>在a标签里加入class="a_tag"即可。如果你没有在a标签里添加任何内容，就像第一个例子一样自动添加内容。</span>
+		<span>在a标签里加入class="a-tag"即可。如果你没有在a标签里添加任何内容，就像第一个例子一样自动添加内容。</span>
 		<br>
-		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a_tag&quot;&gt;&lt;/a&gt;</span>
+		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;&lt;/a&gt;</span>
 		<span>超链接图标、管道符、title都会由jquery自动添加</span>
 		<br><br>
-		<span>在a标签里加入class="a_tag"时，如果你想自定义a标签内容，可直接填写内容。就像第二例子一样</span>
+		<span>在a标签里加入class="a-tag"时，如果你想自定义a标签内容，可直接填写内容。就像第二例子一样</span>
 		<br>
-		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a_tag&quot;&gt;自定义内容&lt;/a&gt;</span>
+		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;自定义内容&lt;/a&gt;</span>
 		<span>程序不会自动帮你添加a标签内容了</span>
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>A标签 幽灵按钮</h2>
-	<a href="#" class="a_tag-button">幽灵按钮</a>
+	<a href="#" class="a-tag-button">幽灵按钮</a>
 	<br>
 	<div class="embed placeholder-top">
-		<span>在a标签里加入class="a_tag-button"即可。</span>
-		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a_tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
+		<span>在a标签里加入class="a-tag-button"即可。</span>
+		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>幽灵按钮2</h2>
-	<button class="button_tag">START</button>
-	<button class="button_tag" data="70">start</button>
+	<button class="button-tag">START</button>
+	<button class="button-tag" data="70">start</button>
 	<br>
 	<div class="embed placeholder-top">
-		<span>在button标签里加入class="button_tag"即可。例：</span>
-		<span class="code-fragment">&lt;button  class=&quot;button_tag&quot;&gt;START&lt;/button&gt;</span>
+		<span>在button标签里加入class="button-tag"即可。例：</span>
+		<span class="code-fragment">&lt;button  class=&quot;button-tag&quot;&gt;START&lt;/button&gt;</span>
 		<span>，就像第一个例子。</span>
 		<br>
 		<span>加入data即可控制大小，例：</span>
-		<span class="code-fragment">&lt;button  class=&quot;button_tag&quot; data=&quot;70&quot;&gt;START&lt;/button&gt;</span>
+		<span class="code-fragment">&lt;button  class=&quot;button-tag&quot; data=&quot;70&quot;&gt;START&lt;/button&gt;</span>
 		<span>，就像第二个例子。</span>
 	</div>
-</div>
+</div><br>
+
+<div class="base">
+	<h2>按钮组(A/button)</h2>
+	<div class="a-tag-group">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#" class="placeholder-right">5</a>
+	</div>
+	<div class="button-tag-group">
+		1月31号 晚上7点添加
+	</div>
+</div><br>
 
 <div class="base">
 	<h2>img图片样式</h2>
@@ -92,10 +106,11 @@
 		<span>当class="img-frames"时，带边框圆角样式，例子为第三个</span><br>
 		<span>当class="img-frames-hover"时，带边框圆角样式和变化效果，例子为第四个</span>
 	</div>
-</div>
+</div><br>
+
 <div class="base">
 	<h2>form标签及input 例子1</h2>
-	<form action="#" class="form_tag">
+	<form action="#" class="form-tag">
 		<input type="text" data="email"/>
 		<input type="text" data="user" />
 		<input type="password" data="password" />
@@ -105,8 +120,8 @@
 		<input type="submit" />
 	</form>
 	<div class="embed placeholder-top">
-		<span>在form标签里加入class="form_tag"即可。例：</span>
-		<span class="code-fragment">&lt;form action=&quot;#&quot; class=&quot;form_tag&quot;&gt;</span>
+		<span>在form标签里加入class="form-tag"即可。例：</span>
+		<span class="code-fragment">&lt;form action=&quot;#&quot; class=&quot;form-tag&quot;&gt;</span>
 		<span>，input样式只需要在input里插入data就行了。例：</span>
 		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;email&quot; /&gt;</span>
 		<span>，data为email、邮箱时,就像第一个例子。当data为user、username、用户、用户名、登录名时，就是第二个例子。当data为password、密码时，就是第三个例子。<br>如果没有写data，例：</span>
@@ -120,10 +135,8 @@
 		<br>
 		<span>在input添加width、height即可自定义input的宽高(防止有些人不会css...)，例：</span>
 		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;自定义宽高&quot; width=&quot;200&quot; height=&quot;30&quot; /&gt;</span>
-
-
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>嵌入</h2>
@@ -134,7 +147,7 @@
 		<span>在div标签里加入class="embed"即可。例：</span>
 		<span class="code-fragment">&lt;div class=&quot;embed&quot;&gt;你好&lt;/div&gt;</span>
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>代码片段</h2>
@@ -145,7 +158,7 @@
 		<span>在code标签里加入class="code-fragment"即可。例：</span>
 		<span class="code-fragment">&lt;code class=&quot;code-fragment&quot;&gt;code&lt;/code&gt;</span>
 	</div>
-</div>
+</div><br>
 
 <div class="base">
 	<h2>代码</h2>
@@ -160,7 +173,7 @@
 		<span>直接写code标签就行，无需加其他样式，如果code样式中存在code-fragment，将不会起作用。例：</span>
 		<span class="code-fragment">&lt;code&gt;i'm code&lt;/code&gt;</span>
 	</div>
-</div>
+</div><br>
 </body>
 <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.js"></script>
 <script src="/js/base.js"></script>

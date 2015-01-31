@@ -1,3 +1,4 @@
+//圆角
 .rounded_rtb(@radius: 4px) {
   -ms-border-top-right-radius: @radius;
   -moz-border-top-right-radius: @radius;
@@ -18,9 +19,37 @@
   border-top-left-radius: @radius;
   border-bottom-left-radius: @radius;
 }
-.rounded_all(@radius: 4px){
+.border-radius(@radius: 4px){
   -webkit-border-radius:@radius;
   -ms-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
+}
+
+//阴影
+.box-shadow(@shadow){
+  -webkit-box-shadow:@shadow;
+  -moz-box-shadow:@shadow;
+  -ms-box-shadow:@shadow;
+  box-shadow:@shadow;
+}
+.box-shadow2(@shadow,@shadow2){
+  -webkit-box-shadow:@shadow,@shadow2;
+  -moz-box-shadow:@shadow,@shadow2;
+  -ms-box-shadow:@shadow,@shadow2;
+  box-shadow:@shadow,@shadow2;
+}
+
+//渐变
+.transition(@transition){
+  -webkit-transition:@transition;
+  -moz-transition:@transition;
+  -ms-transition:@transition;
+  transition:@transition;
+}
+.transition2(@transition,@transition2){
+  -webkit-transition:@transition,@transition2;
+  -moz-transition:@transition,@transition2;
+  -ms-transition:@transition,@transition2;
+  transition:@transition,@transition2;
 }
