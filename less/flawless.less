@@ -19,6 +19,10 @@ span{
 }
 .base{
 	margin-bottom: 20px;
+	h2{
+		font-size: 30px;
+		font-weight: 500;
+	}
 }
 
 //a标签 外链
@@ -57,7 +61,8 @@ span{
 }
 
 //a标签 幽灵按钮
-.a-tag-button{
+.a-tag-button
+{
 	display: inline-block;
 	padding: 8px 50px;
 	line-height: 1.4;
@@ -98,7 +103,10 @@ span{
 	}
 }
 
+//a标签 按钮组
 .a-tag-group{
+	float: left;
+	margin-bottom: 10px;
 	a{
 		display: inline-block;
 		margin-left: -1px;
@@ -109,22 +117,50 @@ span{
 		text-decoration: none;
 		border: 1px solid transparent;
 		color: @color1;
-		background-color: rgba(255, 255, 255, 0);
+		background-color: #fff;
 		border-color: @color4;
-	}
-	a:first-child{
-		.rounded_ltb;
-	}
-	a:last-child{
-		.rounded_rtb;
-	}
-	a,a:first-child,a:last-child{
+		&:first-child{
+			.rounded_ltb;
+		}
+		&:last-child{
+			.rounded_rtb;
+		}
 		&:hover{
 			background-color:@color4 + 28;
 			border-color: @color4 - 10;
 			color: @color2;
 		}
 	}
+}
+
+//button标签 按钮组
+.button-tag-group{
+	float: left;
+	margin-bottom: 10px;
+	button{
+		outline:none;
+		padding: 4.7px 20px;
+		float: left;
+		border: 1px solid @color4;
+  		color: @color1;
+  		background-color: #fff;
+  		font-size: 16px;
+  		cursor: pointer;
+  		&:not(:first-child){
+  			margin-left: -1px;
+  		}
+  		&:first-child{
+			.rounded_ltb;
+		}
+		&:last-child{
+			.rounded_rtb;
+		}
+		&:hover{
+			background-color:@color4 + 28;
+			border-color: @color4 - 10;
+			color: @color2;
+		}
+  	}
 }
 
 //img图片样式
@@ -186,6 +222,7 @@ span{
 }
 //嵌入样式
 .embed{
+	clear:both;
 	padding: 12px;
 	background-color: @color4 + 40;
 	border: 1px solid #e3e3e3;
@@ -221,6 +258,27 @@ span{
 	.border-radius;
 }
 
+//边框颜色
+.top-border-color{
+	border-top-color: #82BBE7;
+	border-top-width: 5px;
+	border-radius: 3px;
+}
+.left-border-color{
+	border-left-color: #82BBE7;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+.bottom-border-color{
+	border-bottom-color: #82BBE7;
+	border-bottom-width: 5px;
+	border-radius: 3px;
+}
+.right-border-color{
+	border-right-color: #82BBE7;
+	border-right-width: 5px;
+	border-radius: 3px;
+}
 
 //占位符
 .placeholder-top{

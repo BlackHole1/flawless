@@ -5,4 +5,5 @@
 
 ## 使用方法：
 在文件里调用flawless.css和base.js(事先要调用jquery)就行了。
-如果你想更改,可以在less/flawless.less里修改下include文件就可以完成自定义哦~
+如果你想非常直观的看源码，可以下载less目录。如果你只想使用，下载css和js目录就行啦~
+想看样式的实例，请打开flawless.freeattack.com
