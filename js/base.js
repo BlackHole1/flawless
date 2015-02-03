@@ -27,6 +27,22 @@ $(document).ready(function() {
 	});
 });
 
+//按钮组不可点脚本
+$(document).ready(function(){
+	$(".a-tag-group a").each(function(){
+		if($(this).hasClass("new")){
+			$(this).attr("href","javascript:void(0)");
+		}
+	})
+
+
+	$(".button-tag-group button").each(function(){
+		if($(this).hasClass("new")){
+			$(this).attr("disabled",true);
+		}
+	})
+});
+
 //input脚本
 $(document).ready(function() {
 	$(".form-tag input[data='email'] , .form-tag input[data='邮箱']").attr("placeholder", "邮箱/Email");
