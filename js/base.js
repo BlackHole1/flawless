@@ -1,3 +1,5 @@
+
+
 //a标签脚本
 $(document).ready(function() {
 	var a_tag_length = $(".a-tag-link").length;
@@ -79,3 +81,4 @@ $(document).ready(function() {
 	});
 });
 
+//代码着色
