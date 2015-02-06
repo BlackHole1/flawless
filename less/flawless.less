@@ -36,7 +36,7 @@ span{
  		list-style:none;
  		li{
  			float:left;
- 			padding-left: 20px;
+ 			margin-left: 20px;
 			line-height:60px;
 			text-align:center;
 			position:relative;
@@ -48,6 +48,10 @@ span{
 				&:hover{
 					background-color:@color4 + 15;
 					text-shadow:0 1px 5px rgba(0, 0, 0, 0.23);
+				}
+				i{
+					color: @color3 + 50;
+					zoom:0.5;
 				}
 			}
 			ul{
@@ -65,6 +69,7 @@ span{
 					a{
 						width: 160px;
 						height: 30px;
+						margin-left: 20px;
 						line-height: 1.85;
 						overflow: hidden;
 
@@ -93,7 +98,7 @@ span{
 			outline:none;
 		}
 		input[type=submit]{
-			height: 32px;
+			height: 30px;
 			margin-left: -1px;
 			.rounded_ltb(0px);
 			box-shadow:none;
@@ -128,10 +133,16 @@ span{
 		padding-left: 3px;
 	}
 	.division{
+		position: relative;
 		margin-left: -4px;
 		padding-left: 3px;
+		top: -2px;
+		line-height: 1;
 	}
 	em{
+		position: relative;
+		top: -1px;
+		line-height: 1;
 		padding-left: 3px;
 		padding-right: 3px;
 	}

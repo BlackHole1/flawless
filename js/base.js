@@ -1,20 +1,38 @@
-
+//导航菜单脚本
+$(document).ready(function(){
+	$(".nav-menu > ul > li:not(.logo) > a").each(function(){
+		if($(this).siblings("ul").size()){
+		$(this).append('<i class="glyphicon glyphicon-triangle-right"></i>');
+  		$(this).hover(function(){
+  			$(this).find("i").removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom")
+ 		},function(){
+   			$(this).find("i").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-right")
+   		}); 
+   		}
+	})
+	$(".nav-menu > ul > li:not(.logo) > ul").each(function(){
+		$(this).hover(function(){
+			$(this).prev().find("i").removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
+		},function(){
+			$(this).prev().find("i").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-right")
+		})
+	})
+});
 
 //a标签脚本
 $(document).ready(function() {
-	var a_tag_length = $(".a-tag-link").length;
 	var a_tag_href = $(".a-tag-link").attr("href");
-	var a_tag_text = $(".a-tag-link").text();
 	$(".a_tag-link").attr("title", a_tag_href);
-	for (var i = 0; i < a_tag_length; i++) {
-		if ($(".a-tag-link:eq(" + i + ")").text() !== "") {
-			$(".a-tag-link:eq(" + i + ")").text("");
-			$(".a-tag-link:eq(" + i + ")").append('<i class="glyphicon glyphicon-link"></i><i class="division">|</i><em>' + a_tag_text + '</em>');
-		} else {
-			$(".a-tag-link:eq(" + i + ")").append('<i class="glyphicon glyphicon-link"></i><i class="division">|</i><em>网页外链</em>');
+	var a_tag_text = $(".a-tag-link").text();
+	$(".a-tag-link").each(function(){
+		if($(this).text() !== ""){
+			$(this).text("");
+			$(this).append('<i class="glyphicon glyphicon-link"></i><i class="division">|</i><em>' + a_tag_text + '</em>');
+		}else{
+			$(this).append('<i class="glyphicon glyphicon-link"></i><i class="division">|</i><em>网页外链</em>');
 		}
-	}
-});
+	})
+})
 
 //button标签脚本
 $(document).ready(function() {
@@ -26,8 +44,8 @@ $(document).ready(function() {
 				"width":button_tag_data_text*1+3
 			});
 		}
-	});
-});
+	})
+})
 
 //按钮组不可点脚本
 $(document).ready(function(){
@@ -43,7 +61,7 @@ $(document).ready(function(){
 			$(this).attr("disabled",true);
 		}
 	})
-});
+})
 
 //input脚本
 $(document).ready(function() {
@@ -69,8 +87,8 @@ $(document).ready(function() {
 		if(input_height !== undefined){
 			$(this).css("height",input_height);
 		}
-	});
-});
+	})
+})
 
 //code样式
 $(document).ready(function() {
@@ -78,7 +96,5 @@ $(document).ready(function() {
 		if (!$(this).hasClass('code-fragment')) {
 			$(this).addClass('code-tag');
 		}
-	});
-});
-
-//代码着色
+	})
+})

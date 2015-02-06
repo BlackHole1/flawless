@@ -6,6 +6,9 @@
   padding-bottom: 60px;
   background: url("/img/header.jpg") no-repeat;
   background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
   list-style-type: none;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);

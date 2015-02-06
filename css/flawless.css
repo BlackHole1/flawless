@@ -35,7 +35,7 @@ span {
 }
 .nav-menu ul li {
   float: left;
-  padding-left: 20px;
+  margin-left: 20px;
   line-height: 60px;
   text-align: center;
   position: relative;
@@ -49,6 +49,10 @@ span {
 .nav-menu ul li a:not(first-child):hover {
   background-color: #dbdbdb;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
+}
+.nav-menu ul li a:not(first-child) i {
+  color: #a9a9a9;
+  zoom: 0.5;
 }
 .nav-menu ul li ul {
   display: none;
@@ -77,6 +81,7 @@ span {
 .nav-menu ul li ul li a {
   width: 160px;
   height: 30px;
+  margin-left: 20px;
   line-height: 1.85;
   overflow: hidden;
 }
@@ -109,7 +114,7 @@ span {
   outline: none;
 }
 .nav-menu ul form input[type=submit] {
-  height: 32px;
+  height: 30px;
   margin-left: -1px;
   -ms-border-top-left-radius: 0px;
   -moz-border-top-left-radius: 0px;
@@ -153,10 +158,16 @@ span {
   padding-left: 3px;
 }
 .a-tag-link .division {
+  position: relative;
   margin-left: -4px;
   padding-left: 3px;
+  top: -2px;
+  line-height: 1;
 }
 .a-tag-link em {
+  position: relative;
+  top: -1px;
+  line-height: 1;
   padding-left: 3px;
   padding-right: 3px;
 }
