@@ -61,6 +61,7 @@ span{
 				background-color: @color4 + 50;
 				.box-shadow(0 3px 5px rgba(0, 0, 0, 0.23));
 				.rounded_blr;
+				z-index: 1;
 				li{
 					float:none;
 					border-left:none;
@@ -107,6 +108,112 @@ span{
  	}
  }
 
+//面包屑
+.crumbs{
+	width: 100%;
+	height: 35px;
+	list-style:none;
+	background-color: @color4 + 30;
+	.border-radius;
+	li{
+		float: left;
+		line-height: 2.1;
+		padding-left:10px;
+		&:not(:first-child){
+			&::before{
+				content: "/";
+				padding-right: 10px;
+				color: @color4;
+			}
+		}
+		&:last-child{
+			a{
+				color: @color3;
+				&:hover{
+					color:@color3;
+					cursor:default;
+				}
+			}
+		}
+		a{
+			text-decoration:none;
+			color: @color1;
+			&:hover{
+				color:@color2;
+			}
+		}
+	}
+}
+//面板/公告
+.panel-notice{
+	width: 100%;
+	min-height:200px; 
+	border: 1px solid @color4 + 10;
+	.border-radius;
+	.box-shadow(0 1px 1px rgba(0, 0, 0, 0.07));
+	.title{
+		height: 40px;
+		line-height: 1.9;
+		border-bottom: 1px solid @color4 + 10;
+		background-color: @color4 + 40;
+		text-align: center;
+		font-size: 20px;
+	}
+	.body{
+		padding: 5px;
+	}
+}
+
+//消息窗口
+.alert-news{
+	width: 100%;
+	height: 50px;
+	border: 1px solid;
+	.border-radius;
+	padding: 5px;
+	margin-bottom: 5px;
+	z-index: 1;
+	span{
+		line-height: 2.2;
+		font-size: 18px;
+	}
+}
+.error{
+	border-color:#FFDBDB;
+	background-color: rgb(255, 237, 237);
+	color: rgb(255, 56, 56);
+	::before{
+		.icon;
+		content: "\e014";
+	}
+}
+.warning{
+	border-color:#F1F1A8;
+	background-color: rgb(255, 255, 213);
+	color: #81812F;
+	::before{
+		.icon;
+		content: "\e101";
+	}
+}
+.info{
+	border-color:#A3D4FF;
+	background-color: #B2DBFF;
+	color: #088CFF;
+	::before{
+		.icon;
+		content: "\e107";
+	}
+}
+.success{
+	border-color:#A0FFA0;
+	background-color: #C7FFC7;
+	color: #139613;
+	::before{
+		.icon;
+		content: "\e013";
+	}
+}
 //a标签 外链
 .a-tag-link{
 	display: inline-block;
@@ -226,6 +333,20 @@ span{
 	}
 }
 
+//a/button公用的样式
+.a-tag-group,.button-tag-group{
+	.last,.next{
+		width: 50px;
+		padding-left: 12px;
+	}
+	.no-hover{
+	&:hover{
+		background-color:#fff !important;
+		color: @color1 !important;
+	}
+}
+}
+
 //button标签 按钮组
 .button-tag-group{
 	float: left;
@@ -254,7 +375,7 @@ span{
 			cursor: pointer;
 		}
   	}
-  		.new{
+  	.new{
 		background-color: @color4;
 		color: @color4 - 40;
 	}
@@ -400,4 +521,7 @@ span{
 }
 .placeholder-right{
 	margin-right: 5px;
+}
+.no-click{
+	cursor:default !important;
 }

@@ -1,5 +1,17 @@
 @import "bootstrap_ico.css";
 @charset "utf-8";
+.icon {
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 * {
   padding: 0;
   margin: 0;
@@ -71,6 +83,7 @@ span {
   -webkit-border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  z-index: 1;
 }
 .nav-menu ul li ul li {
   float: none;
@@ -125,6 +138,152 @@ span {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   box-shadow: none;
+}
+.crumbs {
+  width: 100%;
+  height: 35px;
+  list-style: none;
+  background-color: #eaeaea;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.crumbs li {
+  float: left;
+  line-height: 2.1;
+  padding-left: 10px;
+}
+.crumbs li:not(:first-child)::before {
+  content: "/";
+  padding-right: 10px;
+  color: #cccccc;
+}
+.crumbs li:last-child a {
+  color: #777777;
+}
+.crumbs li:last-child a:hover {
+  color: #777777;
+  cursor: default;
+}
+.crumbs li a {
+  text-decoration: none;
+  color: #428bca;
+}
+.crumbs li a:hover {
+  color: #2a6496;
+}
+.panel-notice {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #d6d6d6;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+}
+.panel-notice .title {
+  height: 40px;
+  line-height: 1.9;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-size: 20px;
+}
+.panel-notice .body {
+  padding: 5px;
+}
+.alert-news {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5px;
+  z-index: 1;
+}
+.alert-news span {
+  line-height: 2.2;
+  font-size: 18px;
+}
+.error {
+  border-color: #FFDBDB;
+  background-color: #ffeded;
+  color: #ff3838;
+}
+.error ::before {
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e014";
+}
+.warning {
+  border-color: #F1F1A8;
+  background-color: #ffffd5;
+  color: #81812F;
+}
+.warning ::before {
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e101";
+}
+.info {
+  border-color: #A3D4FF;
+  background-color: #B2DBFF;
+  color: #088CFF;
+}
+.info ::before {
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e107";
+}
+.success {
+  border-color: #A0FFA0;
+  background-color: #C7FFC7;
+  color: #139613;
+}
+.success ::before {
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e013";
 }
 .a-tag-link {
   display: inline-block;
@@ -273,6 +432,18 @@ span {
   background-color: #cccccc;
   color: #a4a4a4;
   cursor: default;
+}
+.a-tag-group .last,
+.button-tag-group .last,
+.a-tag-group .next,
+.button-tag-group .next {
+  width: 50px;
+  padding-left: 12px;
+}
+.a-tag-group .no-hover:hover,
+.button-tag-group .no-hover:hover {
+  background-color: #fff !important;
+  color: #428bca !important;
 }
 .button-tag-group {
   float: left;
@@ -485,4 +656,7 @@ span {
 }
 .placeholder-right {
   margin-right: 5px;
+}
+.no-click {
+  cursor: default !important;
 }
