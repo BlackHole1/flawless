@@ -18,6 +18,7 @@ span{
 	width: 1170px;
 }
 .base{
+	clear: both;
 	margin-bottom: 20px;
 	h2{
 		font-size: 30px;
@@ -124,6 +125,15 @@ span{
 				content: "/";
 				padding-right: 10px;
 				color: @color4;
+			}
+		}
+		&:first-child{
+			&::before{
+				.icon();
+				content: "\e021";
+				padding-left: 0px;
+				font-size: 14px;
+				color: @color3 + 30;
 			}
 		}
 		&:last-child{
@@ -287,7 +297,7 @@ span{
 	text-decoration: none;
 	text-align: center;
 	cursor: pointer;
-	.border-radius(100%);
+	.border-radius(500px);
 	outline:none;
 	color: @color2;
 	background-color: rgba(255, 255, 255, 0);
@@ -298,14 +308,44 @@ span{
 	}
 }
 
-//a标签 按钮组
-.a-tag-group{
+//按钮组
+.button-group{
+	float: left;
+	margin-bottom: 10px;
+	button{
+		float: left;
+		outline:none;
+		padding: 6.8px 19px;
+		min-width: 106px;
+		border: 1px solid @color4;
+  		color: @color1;
+  		background-color: #fff;
+  		font-size: 16px;
+  		&:not(:first-child){
+  			margin-left: -1px;
+  		}
+  		&:first-child{
+			.rounded_ltb;
+		}
+		&:last-child{
+			.rounded_rtb;
+		}
+		&:hover{
+			background-color: @color4 + 30;
+			color: @color2;
+			cursor: pointer;
+		}
+	}
+}
+
+//a页面 按钮组
+.a-page{
 	float: left;
 	margin-bottom: 10px;
 	a{
 		display: inline-block;
 		margin-left: -1px;
-		padding: 4px 20px;
+		padding: 0 14px;
 		line-height: 1.4;
 		text-align: center;
 		float: left;
@@ -334,10 +374,10 @@ span{
 }
 
 //a/button公用的样式
-.a-tag-group,.button-tag-group{
+.a-page,.button-page{
 	.last,.next{
-		width: 50px;
-		padding-left: 12px;
+		width: 40px;
+		padding-left: 7px;
 	}
 	.no-hover{
 	&:hover{
@@ -347,13 +387,13 @@ span{
 }
 }
 
-//button标签 按钮组
-.button-tag-group{
+//button页面 按钮组
+.button-page{
 	float: left;
 	margin-bottom: 10px;
 	button{
 		outline:none;
-		padding: 4.7px 20px;
+		padding: 0.8px 14px;
 		float: left;
 		border: 1px solid @color4;
   		color: @color1;
@@ -386,13 +426,13 @@ span{
     width: 112px;
     margin-top: 5px;
     cursor: pointer;
-    .border-radius(100%);
+    .border-radius(500px);
 }
 .img-circle-hover{
 	box-sizing: border-box;
     width: 112px;
     margin-top: 5px;
-    .border-radius(100%);
+    .border-radius(500px);
     border:6px solid @color4;
     transition:border linear 0.2s;
     &:hover{
@@ -440,13 +480,33 @@ span{
 		.box-shadow(inset 0 1px 1px rgba(0,0,0,.10));
 		.border-radius;
 		&[type="submit"]{
-			width: 50px;
+			width: 100px;
 			padding-left: 0px;
 			background-color: @color4 + 40;
 			color: @color4 - 100;
 			.box-shadow(0 0px 4px rgba(0, 0, 0, 0.23));
 			cursor:pointer;
 		}
+	}
+	.icon{
+		&::before{
+			content:"asd";
+		}
+	}
+	.group-left{
+		.rounded_rtb(0);
+		outline:none;
+	}
+	.group-all{
+		margin:0 -1px 0 -6px;
+		.border-radius(0);
+		outline:none;
+	}
+	.group-right{
+		margin-left: -6px;
+		.rounded_ltb(0);
+		.box-shadow(~"none !important");
+		outline:none;
 	}
 }
 //嵌入样式
@@ -473,6 +533,8 @@ span{
 	font-family: "Courier New",monospace;
 	color: #0c4678;
 	background-color: #f5f5f5;
+	overflow: hidden;
+	word-wrap:break-word;
 	pre{
 		font-family: "Courier New",monospace;
 	}
@@ -485,6 +547,190 @@ span{
 	color: rgba(255, 0, 0, 0.67)!important;
 	.box-shadow(inset 0 1px 1px rgba(255, 0, 0, 0.06));
 	.border-radius;
+}
+//footer页脚样式
+.web-footer{
+	width: 100%;
+	height: 200px;
+	background-color: @color4;
+	.box-shadow(0px 3px 14px 2px rgba(0, 0, 0, 0.23));
+	.inner{
+		padding-top:30px; 
+		margin-right: auto;
+		margin-left: auto;
+		width: 1170px;
+		dl{
+			float: left;
+			padding-right: 40px;
+			border-right: 1px solid @color4 - 50;
+			dt{
+				color: @color4 - 130;
+				padding-bottom: 10px;
+			}
+			dd{
+				text-align: center;
+				padding-bottom: 5px;
+				a{
+					color: @color1;
+					text-decoration: none;
+					&:hover{
+						color:@color2;
+						text-shadow:0 1px 5px rgba(0, 0, 0, 0.23);
+					}
+				}
+			}
+		}
+		dl:not(:first-child){
+			padding-left: 40px;
+		}
+		dl:last-child{
+			border-right: none;
+		}
+		.footer-int{
+			padding-left: 40px;
+			span{
+				color: @color2;
+			}
+		}
+	}
+}
+//footer页脚样式2
+.web-footer2{
+	width: 100%;
+	height: 120px;
+	background-color:#353535;
+	.box-shadow(0px 3px 14px 2px rgba(0, 0, 0, 0.23));
+		.inner{
+		padding-top:30px; 
+		margin-right: auto;
+		margin-left: auto;
+		width: 1170px;
+		ul:first-child{
+			float:left;
+			list-style: none;
+			li{
+				float: left;
+				padding:0 20px;
+				border-right: 1px solid @color4 - 50;
+				a{
+					color: white;
+					text-decoration: none;
+					&:hover{
+						color:@color4;
+					}
+				}
+				&:first-child{
+					padding-left:0;
+				}
+				&:first-child{
+					width: 92px;
+				}
+				&:first-child,&:last-child{
+					border-right:none;
+				}
+				&:not(:first-child){
+					line-height: 1.9;
+				}
+			}
+		}
+		p{
+			padding-top: 55px;
+			color: @color4 - 50;
+			font-size: 13px;
+		}
+		.right-icon{
+			float: right;
+			ul{
+				li{
+					border-right:none;
+				}
+			}
+		}
+	}
+}
+//footer页脚样式3
+.web-footer3{
+	width: 100%;
+	height: 304px;
+	background-color:#353535;
+	.box-shadow(0px 3px 14px 2px rgba(0, 0, 0, 0.23));
+	.inner{
+		padding-top:30px; 
+		margin-right: auto;
+		margin-left: auto;
+		width: 1170px;
+		dl{
+			float: left;
+			padding-right: 65px;
+			width: 300px;
+			dd{
+				font-size: 14px;
+				color: @color4;
+			}
+		}
+		dl:last-child{
+			width: 235px !important;
+			padding-right:0 !important;
+		}
+		dl:not(:first-child){
+			float: left;
+			padding-right: 65px;
+			width: 300px;
+			dt{
+				padding-bottom: 10px;
+				border-bottom: 1px dashed @color4 - 50;
+				span{
+					padding-bottom:9px;
+					border-bottom: 3px solid @color1;
+					font-size: 20px;
+					color: white;
+				}
+			}
+			dd{
+				padding: 10px 0 8px;
+				border-bottom: 1px solid @color4 - 130;
+				&:last-child{
+					border-bottom: none;
+				}
+				a{
+					font-size: 15px;
+					color: @color4;
+					text-decoration: none;
+					&:hover{
+						color:@color4 - 60;
+						text-shadow:0 1px 5px rgba(0, 0, 0, 0.23);
+					}
+				}
+				small{
+					color: @color4 - 50;
+				}
+			}
+
+		}
+	}
+}
+.web-footer3-bottom{
+	width: 100%;
+	height: 63px;
+	background-color:#353535;
+	.box-shadow(0px 3px 14px 2px rgba(0, 0, 0, 0.23));
+	.inner{
+		padding-top:16px; 
+		margin-right: auto;
+		margin-left: auto;
+		width: 1170px;
+		span{
+			float: left;
+			color: @color4 - 40;
+		}
+		ul{
+			list-style: none;
+			li{
+				float: right;
+				padding-left: 30px;
+			}
+		}
+	}
 }
 
 //边框颜色
