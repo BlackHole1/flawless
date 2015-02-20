@@ -192,37 +192,63 @@ span{
 	border-color:#FFDBDB;
 	background-color: rgb(255, 237, 237);
 	color: rgb(255, 56, 56);
-	::before{
-		.icon;
-		content: "\e014";
+	span:first-child{
+		&::before{
+			.icon;
+			content: "\e014";
+		}
 	}
 }
 .warning{
 	border-color:#F1F1A8;
 	background-color: rgb(255, 255, 213);
 	color: #81812F;
-	::before{
-		.icon;
-		content: "\e101";
+	span:first-child{
+		&::before{
+			.icon;
+			content: "\e101";
+		}
 	}
 }
 .info{
 	border-color:#A3D4FF;
 	background-color: #B2DBFF;
 	color: #088CFF;
-	::before{
-		.icon;
-		content: "\e107";
+	span:first-child{
+		&::before{
+			.icon;
+			content: "\e107";
+		}
 	}
 }
 .success{
 	border-color:#A0FFA0;
 	background-color: #C7FFC7;
 	color: #139613;
-	::before{
-		.icon;
-		content: "\e013";
+	span:first-child{
+		&::before{
+			.icon;
+			content: "\e013";
+		}
 	}
+}
+.alert-news-all-close{
+	float: right;
+	padding-right: 10px;
+	line-height: 2.6 !important;
+	font-size: 15px !important;
+}
+.alert-news-error-close{
+	color: rgb(255, 56, 56) + 80;
+}
+.alert-news-warning-close{
+	color: #81812F + 80;
+}
+.alert-news-info-close{
+	color: #088CFF + 80;
+}
+.alert-news-success-close{
+	color: #139613 + 80;
 }
 //a标签 外链
 .a-tag-link{
@@ -509,6 +535,48 @@ span{
 		outline:none;
 	}
 }
+
+//table样式
+.table-tag-head{
+	padding: 10px 10px 10px 30px;
+	margin-bottom: -1px;
+	width: 100%;
+	border: 1px solid @color4;
+	background-color: @color4 + 30;
+	.rounded_tlr;
+	text-align: center;
+	span{
+		font-size: 18px;
+	}
+}
+.table-tag{
+	width: 100%;
+	border: 1px solid @color4;
+	.rounded_blr;
+	border-collapse: separate;
+	border-spacing: 0;
+	&>thead{
+		text-align: center;
+		&>tr{
+			&>th,&>td{
+				border-bottom: 1px solid @color4;
+				padding:10px 0;
+			}
+		}
+	}
+	&>tbody{
+		text-align: center;
+		&>tr{
+			&:nth-child(odd){
+				background-color:@color4 + 40;
+			}
+			&>th,&>td{
+				padding:10px 0;
+			}
+		}
+	}
+}
+
 //嵌入样式
 .embed{
 	clear:both;

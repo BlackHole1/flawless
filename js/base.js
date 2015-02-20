@@ -25,9 +25,26 @@ $(document).ready(function(){
 		if($(this).next("li").length == 0){
 			$(this).find("a").attr("href","javascript:void(0)");
 		}
-		// if($(this).next("li") == undefined){
-		// 	$(this).find("a").attr("href","javascript:void(0)");
-		// }
+	})
+})
+
+//警告窗脚本
+$(document).ready(function(){
+	$(".close").each(function(){
+		if($(this).hasClass("alert-news error")){
+			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-error-close alert-news-all-close'></span>")
+		}else if($(this).hasClass("alert-news warning")){
+			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-warning-close alert-news-all-close'></span>")
+		}else if($(this).hasClass("alert-news info")){
+			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-info-close alert-news-all-close'></span>")
+		}else if($(this).hasClass("alert-news success")){
+			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-success-close alert-news-all-close'></span>")
+		}
+		$(this).click(function(){
+			$(this).animate({
+				opacity: "hide"
+       			}, "1000")
+		})
 	})
 })
 
@@ -117,6 +134,21 @@ $(document).ready(function() {
 	})
 });
 
+//table脚本
+$(".table-tag").each(function(){
+	if(!$(this).prev().hasClass("table-tag-head")){
+		$(this).css({
+			"-ms-border-top-left-radius":"4px",
+			"-moz-border-top-left-radius":"4px",
+			"-webkit-border-top-left-radius":"4px",
+			"-ms-border-top-right-radius":"4px",
+			"-moz-border-top-right-radius":"4px",
+			"-webkit-border-top-right-radius":"4px",
+			"border-top-left-radius":"4px",
+			"border-top-right-radius":"4px"
+		})
+	}
+})
 
 // code样式
 $(document).ready(function() {

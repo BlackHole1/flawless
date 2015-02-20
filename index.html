@@ -154,16 +154,16 @@
 </div>
 <div class="base">
 	<h2>消息窗口</h2>
-	<div class="alert-news error">
+	<div class="alert-news error close">
 		<span>I'm 警告信息</span>
 	</div>
-	<div class="alert-news warning">
+	<div class="alert-news warning close">
 		<span>I'm 注意事项</span>
 	</div>
-	<div class="alert-news info">
+	<div class="alert-news info close">
 		<span>I'm 事件信息</span>
 	</div>
-	<div class="alert-news success">
+	<div class="alert-news success close">
 		<span>I'm 事件成功</span>
 	</div>
 	<div class="embed placeholder-top">
@@ -171,6 +171,8 @@
 		<code><pre>&lt;div class=&quot;alert-news error&quot;&gt;
   &lt;span&gt;I&#39;m 警告信息&lt;/span&gt;
 &lt;/div&gt;</pre></code>
+		<span>在增加一个class样式为close，就可以实现点击X渐渐关闭，如</span>
+		<span class="code-fragment">&lt;div class=&quot;alert-news error close&quot;&gt;*******&lt;/div&gt;</span>
 	</div>
 </div>
 
@@ -291,8 +293,6 @@
 <div class="base">
 	<h2>input样式</h2>
 	<form action="#" class="form-tag">
-		<input class="icon" type="text">
-		<br>
 		<input type="text" data="email"/>
 		<br>
 		<input type="text" data="user" />
@@ -343,6 +343,77 @@
 　　&lt;input class=&quot;group-all&quot; type=&quot;password&quot; data=&quot;确认密码&quot;&gt;
 　　&lt;input class=&quot;group-right&quot; type=&quot;submit&quot;&gt;
 &lt;/form&gt;</pre></code>
+	</div>
+</div><br>
+
+<div class="base">
+	<h2>table样式</h2>
+	<div class="table-tag-head">
+		<span>个人年度月薪总单</span>
+	</div>
+	<table class="table-tag">
+	  <thead>
+	    <tr>
+	    	<th>#</th>
+	      	<th>月份</th>
+	      	<th>薪水</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	    	<th>1</th>
+	     	<td>一月</td>
+	     	<td>￥12000</td>
+	    </tr>
+	    <tr>
+	    	<th>2</th>
+	    	<td>二月</td>
+	    	<td>￥14000</td>
+	    </tr>
+	    <tr>
+	    	<th>3</th>
+	    	<td>三月</td>
+	    	<td>￥14000</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<div class="embed placeholder-top">
+		<span>在table里加入</span>
+		<span class="code-fragment">class="table-tag"</span>
+		<span>就行了，记得在table前面加入</span>
+		<span class="code-fragment">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
+		<span>如果不加入</span><span class="code-fragment">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
+		<span>jquery会自动帮你做成圆角</span>
+		<span>代码如下</span>
+		<code><pre>&lt;div class=&quot;table-tag-head&quot;&gt;
+  &lt;span&gt;个人年度月薪总单&lt;/span&gt;
+&lt;/div&gt;
+&lt;table class=&quot;table-tag&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;月份&lt;/th&gt;
+      &lt;th&gt;薪水&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;一月&lt;/td&gt;
+      &lt;td&gt;￥12000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;二月&lt;/td&gt;
+      &lt;td&gt;￥14000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;三月&lt;/td&gt;
+      &lt;td&gt;￥14000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre></code>
 	</div>
 </div><br>
 
