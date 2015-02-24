@@ -10,12 +10,14 @@ $(document).ready(function(){
    		}); 
    		}
 	})
-	$(".nav-menu > ul > li:not(.logo) > ul").hover(function(){
-		$(this).prev().find("i").removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
-	},function(){
-		$(this).prev().find("i").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-right")
+	$(".nav-menu > ul > li:not(.logo) > ul").each(function(){
+		$(this).hover(function(){
+			$(this).prev().find("i").removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
+		},function(){
+			$(this).prev().find("i").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-right")
+		})
 	})
-})
+});
 
 //面包屑脚本
 $(document).ready(function(){
@@ -38,15 +40,13 @@ $(document).ready(function(){
 		}else if($(this).hasClass("alert-news success")){
 			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-success-close alert-news-all-close'></span>")
 		}
-		$(this).find(".alert-news-all-close").click(function(){
-			$(this).parent().animate({
+		$(this).click(function(){
+			$(this).animate({
 				opacity: "hide"
        			}, "1000")
 		})
 	})
 })
-
-
 
 //a标签脚本
 $(document).ready(function() {
@@ -107,25 +107,6 @@ $(document).ready(function(){
 	}
 })
 
-//按钮下拉菜单脚本
-$(document).ready(function(){
-	$(".dropdown button").next("ul").addClass("dropdown-ul");
-	$(".dropdown button").click(function(){
-		if($(this).parent().attr("class") == "dropdown"){
-			$(this).parent().attr("class","dropdown2")
-			$(this).next("ul").toggle("fast")
-		}else if($(this).parent().attr("class") == "dropdown2"){
-			$(this).parent().attr("class","dropdown")
-			$(this).next("ul").toggle("fast")
-		}
-	}).blur(function(){
-		if($(this).parent().attr("class") == "dropdown2"){
-			$(this).parent().attr("class","dropdown")
-			$(this).next("ul").toggle("fast")
-		}
-	})
-})
-
 //input脚本 例子1
 $(document).ready(function() {
 	$(".form-tag input[data='email'] , .form-tag input[data='邮箱']").attr("placeholder", "邮箱/Email");
@@ -172,7 +153,7 @@ $(".table-tag").each(function(){
 // code样式
 $(document).ready(function() {
 	$("code").each(function() {
-		if (!$(this).hasClass('code')){
+		if (!$(this).hasClass('code-fragment')){
 			$(this).addClass('code-tag');
 		}
 	})
@@ -184,7 +165,7 @@ $(document).ready(function(){
 	$(".web-footer2").wrapInner("<div class='inner'></div>");
 	$(".web-footer3").wrapInner("<div class='inner'></div>");
 	$(".web-footer3-bottom").wrapInner("<div class='inner'></div>");
-	$(".web-footer .inner").each(function(){
+	$(".web-footer").find(".inner").each(function(){
 		var footer_left = $(this).find("dl").size();
 		 if(footer_left == 0){
 			$(this).find(".footer-int").removeClass("footer-int").css("color","#428bca");
@@ -196,56 +177,48 @@ $(document).ready(function(){
 			})
 		}
 	})
-	$(".web-footer2 .inner").on("mouseover mouseout","ul:eq(1) img",function(e){
-		var img_arr = [
-		["/img/footer-qq.png","/img/footer-qq2.png"],
-		["/img/footer-weibo.png","/img/footer-weibo2.png"],
-		["/img/footer-qqweibo.png","/img/footer-qqweibo2.png"],
-		["/img/footer-weixin.png","/img/footer-weixin2.png"]
-		];
-		var img_src = $(this).attr("src");
-		if(event.type=="mouseover"){
-			for(i=0;i<4;i++){
-				if($.inArray(img_src,img_arr[i]) !== -1){
-					if(img_src == img_arr[i][0]){
-						$(this).attr("src",img_arr[i][1]);
-					}
-				}
-			}
-		}else if(event.type=="mouseout"){
-			for(i=0;i<4;i++){
-				if($.inArray(img_src,img_arr[i]) !== -1){
-					if(img_src == img_arr[i][1]){
-						$(this).attr("src",img_arr[i][0]);
-					}
-				}
-			}
-		}
+	$(".web-footer2").find(".inner").each(function(){
+		$(this).find("ul").eq(1).find("img").eq(0).hover(function(){
+			$(this).attr("src","/img/footer-qq2.png");
+		},function(){
+			$(this).attr("src","/img/footer-qq.png");
+		})
+		$(this).find("ul").eq(1).find("img").eq(1).hover(function(){
+			$(this).attr("src","/img/footer-weibo2.png");
+		},function(){
+			$(this).attr("src","/img/footer-weibo.png");
+		})
+		$(this).find("ul").eq(1).find("img").eq(2).hover(function(){
+			$(this).attr("src","/img/footer-qqweibo2.png");
+		},function(){
+			$(this).attr("src","/img/footer-qqweibo.png");
+		})
+		$(this).find("ul").eq(1).find("img").eq(3).hover(function(){
+			$(this).attr("src","/img/footer-weixin2.png");
+		},function(){
+			$(this).attr("src","/img/footer-weixin.png");
+		})
 	})
-	$(".web-footer3-bottom .inner ul").on("mouseover mouseout","img",function(e){
-		var img_arr = [
-		["/img/footer-qq-32.png","/img/footer-qq2-32.png"],
-		["/img/footer-weibo-32.png","/img/footer-weibo2-32.png"],
-		["/img/footer-qqweibo-32.png","/img/footer-qqweibo2-32.png"],
-		["/img/footer-weixin-32.png","/img/footer-weixin2-32.png"]
-		];
-		var img_src = $(this).attr("src");
-		if(event.type=="mouseover"){
-			for(i=0;i<4;i++){
-				if($.inArray(img_src,img_arr[i]) !== -1){
-					if(img_src == img_arr[i][0]){
-						$(this).attr("src",img_arr[i][1]);
-					}
-				}
-			}
-		}else if(event.type=="mouseout"){
-			for(i=0;i<4;i++){
-				if($.inArray(img_src,img_arr[i]) !== -1){
-					if(img_src == img_arr[i][1]){
-						$(this).attr("src",img_arr[i][0]);
-					}
-				}
-			}
-		}
+	$(".web-footer3-bottom").find(".inner").each(function(){
+		$(this).find("ul").find("img").eq(0).hover(function(){
+			$(this).attr("src","/img/footer-qq2-32.png");
+		},function(){
+			$(this).attr("src","/img/footer-qq-32.png");
+		})
+		$(this).find("ul").find("img").eq(1).hover(function(){
+			$(this).attr("src","/img/footer-weibo2-32.png");
+		},function(){
+			$(this).attr("src","/img/footer-weibo-32.png");
+		})
+		$(this).find("ul").find("img").eq(2).hover(function(){
+			$(this).attr("src","/img/footer-qqweibo2-32.png");
+		},function(){
+			$(this).attr("src","/img/footer-qqweibo-32.png");
+		})
+		$(this).find("ul").find("img").eq(3).hover(function(){
+			$(this).attr("src","/img/footer-weixin2-32.png");
+		},function(){
+			$(this).attr("src","/img/footer-weixin-32.png");
+		})
 	})
 })

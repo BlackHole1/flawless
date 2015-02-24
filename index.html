@@ -26,7 +26,7 @@
 	</div>
 	<div class="embed placeholder-top">
 		<span>在div里加上class="container"就行，例：</span>
-		<span class="code">&lt;div class=&quot;container&quot;&gt;我是内容&lt;/div&gt;</span>
+		<span class="code-fragment">&lt;div class=&quot;container&quot;&gt;我是内容&lt;/div&gt;</span>
 		<span>，多层container不会起作用，因为container使用的是px绝对定位，而不是%相对定位</span>
 	</div>
 </div><br>
@@ -36,7 +36,7 @@
 	<div class="placeholder-top placeholder-bottom placeholder-left placeholder-right">我的上下左右全部被占了5px空间</div>
 	<div class="embed">
 	<span>placeholder-top是向上占5px，同理placeholder-bottom placeholder-left placeholder-right各向下、左、右占位，例：</span>
-	<span class="code">&lt;div class=&quot;placeholder-top placeholder-bottom placeholder-left placeholder-right&quot;&gt;我的上下左右全部被占了5px空间&lt;/div&gt;</span>
+	<span class="code-fragment">&lt;div class=&quot;placeholder-top placeholder-bottom placeholder-left placeholder-right&quot;&gt;我的上下左右全部被占了5px空间&lt;/div&gt;</span>
 </div>
 </div><br>
 
@@ -85,16 +85,16 @@
 	<div class="embed placeholder-top">
 		<span>在div里加上class="nav-menu"，加上ul和li与a就行了，例：</span>
 		<code>
-<pre>&lt;div <code class="code">class=&quot;nav-menu&quot;</code>&gt;
+<pre>&lt;div class=&quot;nav-menu&quot;&gt;
   &lt;ul&gt;
-    &lt;li <code class="code">class=&quot;logo&quot;</code>&gt;&lt;a href=&quot;#&quot;&gt;FlawLess&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;logo&quot;&gt;&lt;a href=&quot;#&quot;&gt;FlawLess&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Less&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sass&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Css&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;JQuery&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
-    &lt;form <code class="code">class=&quot;form-tag&quot;</code>&gt;&lt;input type=&quot;text&quot;&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/form&gt;
+    &lt;form class=&quot;form-tag&quot;&gt;&lt;input type=&quot;text&quot;&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/form&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 		</code>
@@ -102,7 +102,7 @@
 		<br>
 		<span>如果你想要导航菜单下拉样式的话，直接在第一层li里写上ul和li就行了，例：</span>
 		<code>
-			<pre>&lt;div <code class="code">class=&quot;nav-menu&quot;</code>&gt;
+			<pre>&lt;div class=&quot;nav-menu&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;
       &lt;ul&gt;
@@ -128,7 +128,7 @@
 	</ul>
 	<div class="embed placeholder-top">
 		<span>最外层是ul标签，里面则是li标签，li标签套着a标签。只需要给ul一个crumbs样式就行，其他的由FlawLess完成，例：</span>
-		<span class="code">&lt;ul class="crumbs"&gt;&lt;li&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;......&lt;/ul&gt;</span>
+		<span class="code-fragment">&lt;ul class="crumbs"&gt;&lt;li&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;......&lt;/ul&gt;</span>
 	</div>
 </div>
 
@@ -145,9 +145,9 @@
 	</div>
 	<div class="embed placeholder-top">
 		<span>一共3个div，第一个包含另外两个div。第一个div的class样式名称为panel-notice。例：</span>
-		<code><pre>&lt;div <code class="code">class=&quot;panel-notice&quot;</code>&gt;
-    &lt;div <code class="code">class=&quot;title&quot;</code>&gt;我是标题&lt;/div&gt;
-    &lt;div <code class="code">class=&quot;body&quot;</code>&gt;我是内容&lt;/div&gt;
+		<code><pre>&lt;div class=&quot;panel-notice&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;我是标题&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;我是内容&lt;/div&gt;
 &lt;/div&gt;</pre>
 		</code>
 	</div>
@@ -172,50 +172,8 @@
   &lt;span&gt;I&#39;m 警告信息&lt;/span&gt;
 &lt;/div&gt;</pre></code>
 		<span>在增加一个class样式为close，就可以实现点击X渐渐关闭，如</span>
-		<span class="code">&lt;div class=&quot;alert-news error close&quot;&gt;*******&lt;/div&gt;</span>
+		<span class="code-fragment">&lt;div class=&quot;alert-news error close&quot;&gt;*******&lt;/div&gt;</span>
 	</div>
-</div>
-
-<div class="base">
-	<h2>文章框架</h2>
-	<div class="article-box">
-		<div class="box-left">
-			<div class="left-header">
-				<span>我是标题</span>
-				<span>我是作者</span>
-			</div>
-			<div class="left-body">
-				<span>我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。</span>
-			</div>
-		</div>
-		<div class="box-rigth">
-			<img src="/img/article.png" height="120" width="180">
-		</div>
-		<div class="box-bottom">
-			<span>2015-2-23 15:45</span>
-			<span>2500</span>
-			<span><a href="#">FlawLess</a></span>
-		</div>
-	</div>
-	<code><pre>&lt;div <code class="code">class=&quot;article-box&quot;</code>&gt;
-  &lt;div <code class="code">class=&quot;box-left&quot;</code>&gt;
-    &lt;div <code class="code">class=&quot;left-header&quot;</code>&gt;
-      &lt;span&gt;我是标题&lt;/span&gt;
-      &lt;span&gt;我是作者&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div <code class="code">class=&quot;left-body&quot;</code>&gt;
-      &lt;span&gt;我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。我是内容，再测试这个框架。&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div <code class="code">class=&quot;box-rigth&quot;</code>&gt;
-    &lt;img src=&quot;/img/article.png&quot; height=&quot;120&quot; width=&quot;180&quot;&gt;
-  &lt;/div&gt;
-  &lt;div <code class="code">class=&quot;box-bottom&quot;</code>&gt;
-    &lt;span&gt;2015-2-23 15:45&lt;/span&gt;
-    &lt;span&gt;2500&lt;/span&gt;
-    &lt;span&gt;&lt;a href=&quot;#&quot;&gt;FlawLess&lt;/a&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre></code>
 </div>
 
 <div class="base">
@@ -226,12 +184,12 @@
 	<div class="embed placeholder-top">
 		<span>在a标签里加入class="a-tag"即可。如果你没有在a标签里添加任何内容，就像第一个例子一样自动添加内容。</span>
 		<br>
-		<span>代码：</span><span class="code">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;&lt;/a&gt;</span>
+		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;&lt;/a&gt;</span>
 		<span>超链接图标、管道符、title都会由jquery自动添加</span>
 		<br><br>
 		<span>在a标签里加入class="a-tag"时，如果你想自定义a标签内容，可直接填写内容。就像第二例子一样</span>
 		<br>
-		<span>代码：</span><span class="code">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;自定义内容&lt;/a&gt;</span>
+		<span>代码：</span><span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag&quot;&gt;自定义内容&lt;/a&gt;</span>
 		<span>程序不会自动帮你添加a标签内容了</span>
 	</div>
 </div><br>
@@ -242,7 +200,7 @@
 	<br>
 	<div class="embed placeholder-top">
 		<span>在a标签里加入class="a-tag-button"即可。</span>
-		<span class="code">&lt;a href=&quot;#&quot; class=&quot;a-tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
+		<span class="code-fragment">&lt;a href=&quot;#&quot; class=&quot;a-tag-button&quot;&gt;幽灵按钮&lt;/a&gt;</span>
 	</div>
 </div><br>
 
@@ -253,11 +211,11 @@
 	<br>
 	<div class="embed placeholder-top">
 		<span>在button标签里加入class="button-tag"即可。例：</span>
-		<span class="code">&lt;button  class=&quot;button-tag&quot;&gt;START&lt;/button&gt;</span>
+		<span class="code-fragment">&lt;button  class=&quot;button-tag&quot;&gt;START&lt;/button&gt;</span>
 		<span>，就像第一个例子。</span>
 		<br>
 		<span>加入data即可控制大小，例：</span>
-		<span class="code">&lt;button  class=&quot;button-tag&quot; data=&quot;70&quot;&gt;START/button&gt;</span>
+		<span class="code-fragment">&lt;button  class=&quot;button-tag&quot; data=&quot;70&quot;&gt;START/button&gt;</span>
 		<span>，就像第二个例子。</span>
 	</div>
 </div><br>
@@ -297,8 +255,8 @@
 		<br>
 		<span>A标签按钮组例子：</span>
 		<code>
-			<pre>&lt;div <code class="code">class="a-page"</code>&gt;
-  &lt;a href="#" <code class="code">class="new"</code>&gt;1&lt;/a&gt;
+			<pre>&lt;div class="a-page"&gt;
+  &lt;a href="#" class="new"&gt;1&lt;/a&gt;
   &lt;a href="#"&gt;2&lt;/a&gt;
   &lt;a href="#"&gt;3&lt;/a&gt;
   &lt;a href="#"&gt;4&lt;/a&gt;
@@ -307,8 +265,8 @@
 	</code>
 	<span>button标签按钮组例子：</span>
 			<code>
-			<pre>&lt;div <code class="code">class="button-page"</code>&gt;
-  &lt;button <code class="code">class="new"</code>&gt;1&lt;/button&gt;
+			<pre>&lt;div class="button-page"&gt;
+  &lt;button class="new"&gt;1&lt;/button&gt;
   &lt;button&gt;2&lt;/button&gt;
   &lt;button&gt;3&lt;/button&gt;
   &lt;button&gt;4&lt;/button&gt;
@@ -331,43 +289,6 @@
 		<span>当class="img-frames-hover"时，带边框圆角样式和变化效果，例子为第四个</span>
 	</div>
 </div><br>
-
-<div class="base">
-	<h2>按钮下拉菜单</h2>
-	<div class="dropdown">
-		<button>我是下拉菜单</button>
-		<ul>
-			<li>
-				<a href="#">我是第一个</a>
-			</li>
-			<li>
-				<a href="#">我是第二个</a>
-			</li>
-			<li>
-				<a href="#">我是第三个</a>
-			</li>
-		</ul>
-	</div>
-	<div class="embed placeholder-top">
-		<span>先给div一个</span>
-		<span class="code">class="dropdown"</span>
-		<span>。再往div里写button和ul(li)标签，代码如下</span>
-		<code><pre>&lt;div <span class="code">class=&quot;dropdown&quot;</span>&gt;
-  &lt;button&gt;我是下拉菜单&lt;/button&gt;
-　&lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;我是第一个&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;我是第二个&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;我是第三个&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre></code>
-	</div>
-</div>
 
 <div class="base">
 	<h2>input样式</h2>
@@ -393,31 +314,31 @@
 	</form>
 	<div class="embed placeholder-top">
 		<span>在form标签里加入class="form-tag"即可。例：</span>
-		<span class="code">&lt;form action=&quot;#&quot; class=&quot;form-tag&quot;&gt;</span>
+		<span class="code-fragment">&lt;form action=&quot;#&quot; class=&quot;form-tag&quot;&gt;</span>
 		<span>，input样式只需要在input里插入data就行了。例：</span>
-		<span class="code">&lt;input type=&quot;text&quot; data=&quot;email&quot; /&gt;</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;email&quot; /&gt;</span>
 		<span>，data为email、邮箱时,就像第一个例子。当data为user、username、用户、用户名、登录名时，就是第二个例子。当data为password、密码时，就是第三个例子。<br>如果没有写data，例：</span>
-		<span class="code">&lt;input type=&quot;text&quot; /&gt;</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; /&gt;</span>
 		<span>,将会自动帮你添加字符串为“搜索/Search”。如果你不写type，例：</span>
-		<span class="code">&lt;input /&gt;</span><span>,也会自动帮你添加字符串为“搜索/Search”，就像第四个</span>
+		<span class="code-fragment">&lt;input /&gt;</span><span>,也会自动帮你添加字符串为“搜索/Search”，就像第四个</span>
 		<br>
 		<span>如果你想自定义显示input的内容，在input标签里加上data属性，值添上你所想显示的内容就行(不能和"email", "邮箱", "user", "username", "用户", "用户名", "登录名", "password", "密码"一样)，例：</span>
-		<span class="code">&lt;input type=&quot;text&quot; data=&quot;我是自定义内容&quot; /&gt;</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;我是自定义内容&quot; /&gt;</span>
 		<span>。就像第五个例子一样<span>
 		<br>
 		<span>在input添加width、height即可自定义input的宽高(防止有些人不会css...)，例：</span>
-		<span class="code">&lt;input type=&quot;text&quot; data=&quot;自定义宽高&quot; width=&quot;200&quot; height=&quot;30&quot; /&gt;</span>
+		<span class="code-fragment">&lt;input type=&quot;text&quot; data=&quot;自定义宽高&quot; width=&quot;200&quot; height=&quot;30&quot; /&gt;</span>
 		<br><br>
 		<span>想让几个input紧紧相邻的话，可以给他们一个class，左边的给</span>
-		<span class="code">class="group-left"</span>
+		<span class="code-fragment">class="group-left"</span>
 		<span>，右边的给</span>
-		<span class="code">class="group-right"</span>
+		<span class="code-fragment">class="group-right"</span>
 		<span>，中间的给</span>
-		<span class="code">class="group-all"</span>
+		<span class="code-fragment">class="group-all"</span>
 		<br>
 		<span>代码实例：</span>
-		<code><pre>&lt;form action=&quot;#&quot; <code class="code">class=&quot;form-tag&quot;</code>&gt;
-　　&lt;input class=&quot;group-left&quot; type=&quot;text&quot; data=&quot;user&quot;&gt;
+		<code><pre>&lt;form action=&quot;#&quot; class=&quot;form-tag&quot;&gt;
+　　&lt;input class=&quot;group-left&quot;type=&quot;text&quot; data=&quot;user&quot;&gt;
 　　&lt;input class=&quot;group-all&quot; type=&quot;password&quot;&gt;
 　　&lt;input class=&quot;group-all&quot; type=&quot;password&quot; data=&quot;确认密码&quot;&gt;
 　　&lt;input class=&quot;group-right&quot; type=&quot;submit&quot;&gt;
@@ -458,16 +379,16 @@
 	</table>
 	<div class="embed placeholder-top">
 		<span>在table里加入</span>
-		<span class="code">class="table-tag"</span>
+		<span class="code-fragment">class="table-tag"</span>
 		<span>就行了，记得在table前面加入</span>
-		<span class="code">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
-		<span>如果不加入</span><span class="code">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
+		<span class="code-fragment">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
+		<span>如果不加入</span><span class="code-fragment">&lt;div class=&quot;table-tag-head&quot;&gt;&lt;span&gt;*********&lt;/span&gt;&lt;/div&gt;</span><br>
 		<span>jquery会自动帮你做成圆角</span>
 		<span>代码如下</span>
-		<code><pre>&lt;div <code class="code">class=&quot;table-tag-head&quot;</code>&gt;
+		<code><pre>&lt;div class=&quot;table-tag-head&quot;&gt;
   &lt;span&gt;个人年度月薪总单&lt;/span&gt;
 &lt;/div&gt;
-&lt;table <code class="code">class=&quot;table-tag&quot;</code>&gt;
+&lt;table class=&quot;table-tag&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;#&lt;/th&gt;
@@ -503,7 +424,7 @@
 	</div>
 	<div class="embed placeholder-top">
 		<span>在div标签里加入class="embed"即可。例：</span>
-		<span class="code">&lt;div class=&quot;embed&quot;&gt;你好&lt;/div&gt;</span>
+		<span class="code-fragment">&lt;div class=&quot;embed&quot;&gt;你好&lt;/div&gt;</span>
 	</div>
 </div><br>
 
@@ -514,18 +435,18 @@
 	</div>
 	<div class="embed placeholder-top">
 		<span>在div标签里加入class="left-border-color"即可(left-border-color和embed更搭哦...)。例：</span>
-		<span class="code">&lt;div class=&quot;embed left-border-color&quot;&gt;欧巴，你的left-border-color。“是你的left-border-color”&lt;/div&gt;</span>
+		<span class="code-fragment">&lt;div class=&quot;embed left-border-color&quot;&gt;欧巴，你的left-border-color。“是你的left-border-color”&lt;/div&gt;</span>
 	</div>
 </div><br>
 
 <div class="base">
 	<h2>代码片段</h2>
-	<code class="code">
+	<code class="code-fragment">
 		I'm code fragment;
 	</code>
 	<div class="embed placeholder-top">
-		<span>在code标签里加入class="code"即可。例：</span>
-		<span class="code">&lt;code class=&quot;code&quot;&gt;code&lt;/code&gt;</span>
+		<span>在code标签里加入class="code-fragment"即可。例：</span>
+		<span class="code-fragment">&lt;code class=&quot;code-fragment&quot;&gt;code&lt;/code&gt;</span>
 	</div>
 </div><br>
 
@@ -533,20 +454,20 @@
 	<h2>代码</h2>
 	<code>
 	<pre>$("code").each(function() {
-  if (!$(this).hasClass('code')) {
+  if (!$(this).hasClass('code-fragment')) {
     $(this).addClass('code_tag');
   }
 });</pre>
 	</code>
 	<div class="embed placeholder-top">
-		<span>直接写code标签就行，无需加其他样式，如果code样式中存在code，将不会起作用。例：</span>
-		<span class="code">&lt;code&gt;i'm code&lt;/code&gt;</span>
+		<span>直接写code标签就行，无需加其他样式，如果code样式中存在code-fragment，将不会起作用。例：</span>
+		<span class="code-fragment">&lt;code&gt;i'm code&lt;/code&gt;</span>
 	</div>
 </div><br>
 
 <div class="base">
 	<h2>web-footer页脚样式一</h2>
-	<code><pre>&lt;div <code class="code">class=&quot;web-footer&quot;</code>&gt;
+	<code><pre>&lt;div class=&quot;web-footer&quot;&gt;
   &lt;dl&gt;
     &lt;dt&gt;关于我们&lt;/dt&gt;
     &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;联系我们&lt;/a&gt;&lt;/dd&gt;
@@ -565,7 +486,7 @@
     &lt;dd&gt;&lt;a href=&quot;http://t.qq.com/Black__Hole&quot; target=&quot;_blank&quot;&gt;腾讯微博&lt;/a&gt;&lt;/dd&gt;
     &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;微信关注&lt;/a&gt;&lt;/dd&gt;
   &lt;/dl&gt;
-  &lt;div <code class="code">class=&quot;footer-int&quot;</code>&gt;
+  &lt;div class=&quot;footer-int&quot;&gt;
     &lt;span&gt;FlawLess是由Black-Hole独自一人开发，最初开发这套框架的目的是为了方便自己使用，但是后来发现如果不把这个框架推出去，有点遗憾了。也为了完成自己曾经的心愿吧(写一个前端框架)，当然了，心愿有很多，比如自己开发一个类似Nginx的程序。自己也会慢慢的实现的。FlwaLess是由LESS作为CSS编译环境开发的，同时为了简便，把很多事情都交给了jQuery来处理，如果你是做SEO的，怕JS添加内容时，不易于搜索引擎的搜索，这点无需担心。FlawLess框架的jQuery代码只完成一些繁琐的，对搜索引擎无用的东西。我个人希望这个框架就像他的名字一样，完美。FlawLess还是个小孩，需要大家一起维护。如果你有什么意见、Bug可以发邮件给我root@freeattack.com。我收到后，会第一时间处理的&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre></code>
@@ -598,14 +519,14 @@
 <div class="container">
 	<div class="base">
 		<h2>web-footer页脚样式二</h2>
-		<code><pre>&lt;div <code class="code">class=&quot;web-footer2&quot;</code>&gt;
+		<code><pre>&lt;div class=&quot;web-footer2&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;img src=&quot;http://www.mftp.info/20150201/1424160505x2027071718.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;联系我们&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;问题反馈&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;赞助我们&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
-  &lt;div <code class="code">class=&quot;right-icon&quot;</code>&gt;
+  &lt;div class=&quot;right-icon&quot;&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;/img/footer-qq.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://weibo.com/comelove&quot;&gt;&lt;img src=&quot;/img/footer-weibo.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
@@ -619,7 +540,7 @@
 </div>
 <div class="web-footer2">
 		<ul>
-			<li><img src="/img/footer-logo.png" alt=""></li>
+			<li><img src="http://www.mftp.info/20150201/1424160505x2027071718.png" alt=""></li>
 			<li><a href="#">联系我们</a></li>
 			<li><a href="#">问题反馈</a></li>
 			<li><a href="#">赞助我们</a></li>
@@ -638,7 +559,7 @@
 <div class="container">
 	<div class="base">
 		<h2>web-footer页脚样式三</h2>
-		<code><pre>&lt;div <code class="code">class=&quot;web-footer3&quot;</code>&gt;
+		<code><pre>&lt;div class=&quot;web-footer3&quot;&gt;
   &lt;dl&gt;
     &lt;dt&gt;&lt;img src=&quot;http://www.mftp.info/20150201/1424160505x2027071718.png&quot; alt=&quot;&quot;&gt;&lt;/dt&gt;
     &lt;dd&gt;FlawLess打造全世界最简便的前端框架，即便他现在很弱小，但是我相信。&lt;/dd&gt;
@@ -665,7 +586,7 @@
     &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;你想添加的文字&lt;/a&gt;&lt;br&gt;&lt;small&gt;你想添加的说明&lt;/small&gt;&lt;/dd&gt;
   &lt;/dl&gt;
 &lt;/div&gt;
-&lt;div <code class="code">class=&quot;web-footer3-bottom&quot;</code>&gt;
+&lt;div class=&quot;web-footer3-bottom&quot;&gt;
   &lt;span&gt;Copyright &#169; FlawLess 天堂ICP备12345678号-1 天堂公网安备123445678900号&lt;/span&gt;
     &lt;ul&gt;
      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/footer-qq-32.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
@@ -678,7 +599,7 @@
 </div>
 <div class="web-footer3">
 	<dl>
-		<dt><img src="/img/footer-logo.png" alt=""></dt>
+		<dt><img src="http://www.mftp.info/20150201/1424160505x2027071718.png" alt=""></dt>
 		<dd>FlawLess打造全世界最简便的前端框架，即便他现在很弱小，但是我相信。</dd>
 		<dd>FlwaLess是由LESS作为CSS编译环境开发的，同时为了简便，把很多事情都交给了jQuery来处理。我个人希望这个框架就像他的名字一样，完美。FlawLess还是个小孩，需要大家一起维护。如果你有什么意见、Bug可以发邮件给我root@freeattack.com。我收到后，会第一时间处理的</dd>
 	</dl>
