@@ -11,7 +11,6 @@ span {
 .container {
   margin-right: auto;
   margin-left: auto;
-  width: 1170px;
 }
 .base {
   clear: both;
@@ -324,40 +323,6 @@ span {
   -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /*	float: left;
-	width: 70%;
-	max-height: 200px;
-	min-height: 170px;
-	margin: 5px 0;
-	background-color: white;
-	border: 1px solid @color4;
-	.border-radius;
-	.box-shadow(0 4px 10px rgba(0,0,0,0.1));
-	.article-left{
-		width: 100%;
-		.left-header{
-			float: left;
-			width: 76%;
-			min-height: 32px;
-			padding: 3px 10px;
-			border-bottom: 1px solid @color4;
-			span:nth-child(1){
-				float:left;
-				line-height: 1.6;
-				font-size: 18px;
-			}
-			span:nth-child(2){
-				float: right;
-				line-height: 2;
-				font-size: 15px;
-			}
-		}
-	}
-	.article-right{
-		float: left;
-		width: 24%;
-		padding: 10px 10px;
-	}*/
 }
 .article-box .box-left {
   float: left;

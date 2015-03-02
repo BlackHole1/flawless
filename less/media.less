@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "include/function";
+@import "include/var";
+@import "bootstrap_ico.css";
+
+//浏览器宽度大于1200px时
+@media (min-width:1200px) {
+	.container{
+		width: 1170px;
+	}
+}
+
+//浏览器小于1200时
+@media (max-width:1200px){
+	.nav-menu{
+		ul li:first-child a{
+			display: none;
+		}
+	}
+}
+
+//浏览器宽度大于992px时
+@media (min-width: 992px) and (max-width:1200px){
+	.container{
+	width: 970px;
+	}
+}
+
+//浏览器小于992px时
+@media (max-width:992px) {
+	.nav-menu form{
+		display: none;
+	}
+}
+
+//浏览器宽度在769-991之间时
+@media (min-width: 800px) and (max-width:991px){
+	.container{
+		width: 750px;
+	}
+}
+//浏览器宽度小于800时
+@media (max-width:800px) {
+		.container{
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+//浏览器宽度大于768时
+@media  (min-width:768px){
+	.media-nav-menu{
+		display: none;
+	}
+	.nav-menu-toggle{
+		display: none;
+	}
+}
+
+//浏览器宽度小于768时
+@media  (max-width:768px){
+	.nav-menu{
+		display: none;
+	}
+	.media-nav-menu{
+		display: inline-block;
+		width:100%;
+ 		height:60px;
+ 		margin:0 auto;
+ 		background-color:@color4 + 30;
+ 		border-bottom: 1px solid #cccccc;
+ 		a{
+ 			float: left;
+ 			color: #666;
+ 			font-size: 45px;
+ 			text-decoration: none;
+ 			&:hover{
+ 				color: @color1;
+ 			}
+ 		}
+ 		form{
+ 			float: left;
+ 			line-height: 2.7;
+ 			input[type=text]{
+ 				width: 100%;
+ 			}
+ 			input[type=submit]{
+ 				display: none;
+ 			}
+ 		}
+ 		button{
+ 			float: right;
+ 			border-color: white;
+			padding: 9px 10px;
+			margin: 11px 15px 0 0;
+			background-color: transparent;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			outline:none;
+			cursor:pointer;
+			.icon-bar{
+				display: block;
+				margin-bottom: 5px;
+				width: 22px;
+				height: 2px;
+				border-radius: 1px;
+				background-color: @color1;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+ 		}
+	}
+	.nav-menu-toggle{
+		display: none;
+ 		ul{
+ 			list-style:none;
+ 			margin: 7px;
+ 			border-bottom: 1px solid #cccccc;
+ 			li{
+				a{
+					display: block;
+					padding: 10px 15px;
+					font-size: 17px;
+					color: #777;
+					text-decoration: none;
+					&:hover{
+						color: #428bca;
+						background-color: @color4;
+						.border-radius;
+					}
+				}
+ 				ul{
+ 					display: none;
+ 				}
+ 			}
+ 			form{
+ 				display: none;
+ 			}
+ 		}
+	}
+}
+
+//浏览器小于576时
+@media (max-width:576px) {
+	.media-nav-menu{
+		a{
+			font-size: 30px;
+			line-height: 2;
+		}
+		form{
+			display: none;
+		}
+	}
+	.nav-menu-toggle{
+		ul form{
+			display: inline;
+			input[type=text]{
+				width:100%;
+			}
+ 			input[type=submit]{
+ 				display: none;
+ 			}
+		}
+	}
+}

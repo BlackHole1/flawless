@@ -6,8 +6,9 @@
 	<meta name="description" content="最简便的CSS框架,让程序猿不在累" />
 	<meta name="author" content="Black-Hole">
 	<title>FlawLess</title>
-	<link rel="stylesheet" href="/css/flawless.css">
-	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/flawless.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/media.css">
 </head>
 <body>
 <div class="header">
@@ -506,19 +507,25 @@
 
 <div class="base">
 	<h2>alret弹窗</h2>
-	<a id="alert_model" class="a-tag-button">点我弹窗</a>
+	<a  class="alert_model a-tag-button">点我弹窗</a>
 	<div class="alert_model_main">
 		<div class="embed"><span>我可以是任何div，框架会帮自动排版，当点击非弹窗内容时，自动消失</span></div>
 	</div>
+		<a  class="alert_model a-tag-button">点我弹窗</a>
+	<div class="alert_model_main">
+		<div class="alert-news success close">
+  			<span>我成功了</span>
+		</div>
+	</div>
 	<div class="embed placeholder-top">
 		<span>可以是A标签或则button标签，也可以是div。支持任何标签的点击弹窗效果。只需要在标签里加上</span>
-		<code class="code">id="alert_model"</code>
+		<code class="code">class="alert_model"</code>
 		<span>就可以了。然后在</span>
-		<code class="code">id="alert_model"</code>
+		<code class="code">class="alert_model"</code>
 		<span>的下面(因为使用的是next()，所以必须是兄弟元素)，加上</span>
 		<code class="code">&lt;div class="alert_model_main"&gt;你要弹窗的内容&lt;/div&gt;</code>
 		<span>源码：</span>
-		<code><pre>&lt;a id=&quot;alert_model&quot; class=&quot;a-tag-button&quot;&gt;点我弹窗&lt;/a&gt;
+		<code><pre>&lt;a class=&quot;alert_model&quot; class=&quot;a-tag-button&quot;&gt;点我弹窗&lt;/a&gt;
 &lt;div class=&quot;alert_model_main&quot;&gt;
   &lt;div class=&quot;embed&quot;&gt;&lt;span&gt;我可以是任何div，框架会帮自动排版，当点击非弹窗内容时，自动消失&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;</pre></code>
@@ -742,6 +749,7 @@
 	</ul>
 </div>
 </body>
-<script src="/js/jquery-2.1.0.min.js"></script>
-<script src="/js/base.js"></script>
+<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="/js/media.js"></script>
+<script type="text/javascript" src="/js/base.js"></script>
 </html>

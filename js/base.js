@@ -10,6 +10,7 @@ $(document).ready(function(){
    		}); 
    		}
 	})
+	
 	$(".nav-menu > ul > li:not(.logo) > ul").hover(function(){
 		$(this).prev().find("i").removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
 	},function(){
@@ -39,6 +40,7 @@ $(document).ready(function(){
 			$(this).append("<span class='glyphicon glyphicon-remove-circle alert-news-success-close alert-news-all-close'></span>")
 		}
 		$(this).find(".alert-news-all-close").click(function(){
+			$("#alert_mask").remove();
 			$(this).parent().animate({
 				opacity: "hide"
        			}, "1000")
@@ -176,7 +178,7 @@ $(".table-tag").each(function(){
 	}
 })
 //alert_model弹窗样式
-$("#alert_model").on("click",function(e){
+$(".alert_model").on("click",function(e){
 	var all_width = $(document).width();
 	var all_height = $(document).height();
 	var height = $(window).height(); 

@@ -5,5 +5,7 @@
 
 ## 使用方法：
 在文件里调用flawless.css和base.js(事先要调用jquery)就行了。
-如果你想非常直观的看源码，可以下载less目录。如果你只想使用，下载css和js目录就行啦~
+如果你想非常直观的看源码，可以下载less目录。如果你只想使用，下载css和js目录就行了
+
+如果你想使用响应式的话，请在flawless.css之后再加载medai.css。然后在base.js之前(在jquery之后)加载media.js就OK了。其他的不需要动，代码还是那些代码，jquery和css会自动帮你完成响应式开发的
 想看样式的实例，请打开flawless.freeattack.com
