@@ -7,7 +7,7 @@ body {
   height: 100%;
   margin-bottom: 30px;
   padding-bottom: 60px;
-  background: url("/img/header.jpg") no-repeat center;
+  background: url("../img/header.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
